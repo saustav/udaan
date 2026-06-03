@@ -1,0 +1,47 @@
+{
+  "events": [
+    {
+      "id": "fdb-drone-training-2026",
+      "title": "FDB 10-Day Drone Training",
+      "titleFull": "FDB 10-Day Drone Training 2026",
+      "date": "2026-04-06",
+      "dateLabel": "Sunday, 6 April 2026",
+      "dateShort": { "day": "6", "month": "Apr", "year": "2026" },
+      "dateGrid": "APR 6, 2026",
+      "location": "Film Development Board, Kathmandu",
+      "description": "UDAAN technically supervised Film Development Board training for 25 trainees — professionalizing drone use in Nepal's film industry.",
+      "descriptionShort": "UDAAN technically supervised Film Development Board training for 25 trainees — professional standards for Nepal's film industry.",
+      "href": "events/fdb-drone-training-2026.html",
+      "image": "assets/events/fdb-drone-training-2026.webp",
+      "badge": "Training · Completed",
+      "tag": "Completed",
+      "tagStyle": "green",
+      "status": "completed",
+      "cta": "View Recap",
+      "scheduleNote": "10-Day Program",
+      "accent": "primary"
+    },
+    {
+      "id": "nepal-drone-seminar-2026",
+      "title": "Shaping the Sky: National Panel Discussion on Nepal's Drone Ecosystem",
+      "titleFull": "Shaping the Sky: National Panel Discussion on Nepal's Drone Ecosystem",
+      "date": "2026-01-20",
+      "dateLabel": "Tuesday, 20 January 2026",
+      "dateShort": { "day": "20", "month": "Jan", "year": "2026" },
+      "dateGrid": "JAN 20, 2026",
+      "location": "Film Development Board of Nepal, Chabahil",
+      "description": "UDAAN hosts a high-level national dialogue bringing together government, regulators, law enforcement, aviation, and the private sector to build a safe, innovative, and sustainable drone ecosystem.",
+      "descriptionShort": "National dialogue on regulatory frameworks, airspace security, and the future of drones in commerce, cinema, and emergency services.",
+      "href": "events/nepal-drone-seminar-2026.html",
+      "image": "assets/events/nepal-drone-seminar-2026.webp",
+      "badge": "🇳🇵 Panel Discussion",
+      "tag": "Seminar",
+      "tagStyle": "secondary",
+      "status": "completed",
+      "registerUrl": "https://forms.gle/gA5v6WEN4GgPqzn78",
+      "registrationTime": "Registration from 10:00 AM",
+      "cta": "Event Details",
+      "accent": "secondary"
+    }
+  ]
+}

@@ -140,7 +140,7 @@
       '<a class="flex items-center shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg" href="' +
       base +
       'index.html" aria-label="UDAAN home">' +
-      '<img class="h-11 sm:h-16 w-auto object-contain" src="' +
+      '<img class="h-11 sm:h-16 w-auto object-contain" width="487" height="512" src="' +
       base +
       'assets/udaan-logo.svg" alt="Nepal Unmanned Aircraft (Drone) Association — UDAAN official logo"/>' +
       "</a>" +
@@ -152,9 +152,8 @@
       base +
       'contact.html#contact-form">Become a Member</a>' +
       '<button type="button" id="mobile-menu-btn" class="lg:hidden flex items-center justify-center min-w-[44px] min-h-[44px] p-2 rounded-xl text-on-surface hover:bg-surface-container transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" aria-expanded="false" aria-controls="mobile-menu">' +
-      '<span class="sr-only">Open menu</span>' +
+      '<span class="sr-only">Toggle menu</span>' +
       '<span class="material-symbols-outlined text-2xl" id="menu-icon-open">menu</span>' +
-      '<span class="material-symbols-outlined text-2xl hidden" id="menu-icon-close">close</span>' +
       "</button></div></div>" +
       '<div id="mobile-menu" class="hidden lg:hidden mt-2 bg-surface-bright/95 backdrop-blur-md rounded-2xl border border-outline-variant/60 shadow-nav overflow-hidden">' +
       '<div class="flex flex-col p-4">' +
@@ -168,15 +167,11 @@
   function setMobileMenuOpen(container, open) {
     var btn = container.querySelector("#mobile-menu-btn");
     var menu = container.querySelector("#mobile-menu");
-    var iconOpen = container.querySelector("#menu-icon-open");
-    var iconClose = container.querySelector("#menu-icon-close");
 
     if (!btn || !menu) return;
 
     menu.classList.toggle("hidden", !open);
     btn.setAttribute("aria-expanded", String(open));
-    iconOpen.classList.toggle("hidden", open);
-    iconClose.classList.toggle("hidden", !open);
     document.body.classList.toggle("mobile-menu-open", open);
 
     var memberBar = document.getElementById("mobile-member-bar");
