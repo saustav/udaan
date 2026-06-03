@@ -332,3 +332,229 @@ body {
   white-space: nowrap;
   border: 0;
 }
+
+/* —— Mobile & touch —— */
+html {
+  -webkit-text-size-adjust: 100%;
+  overflow-x: clip;
+}
+
+body {
+  overflow-x: clip;
+}
+
+body.mobile-menu-open {
+  overflow: hidden;
+  touch-action: none;
+}
+
+#site-nav > nav {
+  top: max(0.75rem, env(safe-area-inset-top, 0px));
+  left: max(1rem, env(safe-area-inset-left, 0px));
+  right: max(1rem, env(safe-area-inset-right, 0px));
+}
+
+#site-nav .site-nav-bar {
+  min-height: 4rem;
+}
+
+@media (min-width: 640px) {
+  #site-nav .site-nav-bar {
+    min-height: 5rem;
+  }
+}
+
+#site-nav #mobile-menu {
+  max-height: min(70dvh, calc(100dvh - 6.5rem - env(safe-area-inset-top, 0px)));
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#site-nav .mobile-nav-link {
+  display: flex;
+  align-items: center;
+  min-height: 2.75rem;
+  font-size: 1rem;
+}
+
+#site-nav .mobile-nav-sublink {
+  display: flex;
+  align-items: center;
+  min-height: 2.5rem;
+}
+
+.section-deco-icon {
+  font-size: 8rem;
+  line-height: 1;
+}
+
+@media (min-width: 768px) {
+  .section-deco-icon {
+    font-size: 17.5rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  main.pt-28 {
+    padding-top: 6.25rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .udaan-hero--size-full {
+    min-height: min(88dvh, 680px);
+  }
+
+  .udaan-hero--size-page {
+    min-height: min(72dvh, 520px);
+  }
+
+  .udaan-hero--size-compact {
+    min-height: min(62dvh, 440px);
+  }
+
+  .udaan-hero__content .py-16 {
+    padding-top: 2.5rem;
+    padding-bottom: 4.5rem;
+  }
+
+  .udaan-hero__controls {
+    bottom: max(0.75rem, env(safe-area-inset-bottom, 0px));
+    right: max(0.75rem, env(safe-area-inset-right, 0px));
+  }
+
+  .udaan-hero__content .flex.flex-wrap.gap-4 > a,
+  .udaan-hero__content .flex.flex-col.gap-4 > a {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    min-height: 2.75rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .udaan-hero__nav-btn {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+
+  .udaan-hero__dot {
+    width: 0.625rem;
+    height: 0.625rem;
+  }
+
+  .min-h-\[280px\] {
+    min-height: 12rem;
+  }
+
+  main section .p-10 {
+    padding: 1.5rem;
+  }
+
+  .badge-trust {
+    font-size: 0.6875rem;
+    padding: 0.3125rem 0.625rem;
+  }
+
+  .break-contact {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+}
+
+@media (max-width: 639px) {
+  main.pt-28 {
+    padding-top: 5.75rem;
+  }
+
+  .stat-reveal span.text-4xl {
+    font-size: 1.875rem;
+  }
+}
+
+footer {
+  padding-bottom: max(0px, env(safe-area-inset-bottom, 0px));
+}
+
+/* Sticky mobile membership CTA */
+.mobile-member-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 40;
+  padding: 0.5rem max(0.75rem, env(safe-area-inset-left, 0px))
+    max(0.5rem, env(safe-area-inset-bottom, 0px))
+    max(0.75rem, env(safe-area-inset-right, 0px));
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(226, 232, 240, 0.95);
+  box-shadow: 0 -8px 24px rgba(15, 23, 42, 0.1);
+  transition: transform 220ms ease, opacity 220ms ease;
+}
+
+.mobile-member-bar--hidden {
+  transform: translateY(110%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mobile-member-bar__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 9999px;
+  background: #e22830;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 200ms ease, box-shadow 200ms ease;
+  cursor: pointer;
+}
+
+.mobile-member-bar__link:hover {
+  background: #c41e26;
+  box-shadow: 0 4px 12px rgba(226, 40, 48, 0.3);
+}
+
+.mobile-member-bar__link:focus-visible {
+  outline: 2px solid #142c8d;
+  outline-offset: 2px;
+}
+
+.mobile-member-bar__icon {
+  font-size: 1.25rem;
+}
+
+@media (max-width: 1023px) {
+  body.has-mobile-member-bar {
+    padding-bottom: calc(4.75rem + env(safe-area-inset-bottom, 0px));
+  }
+}
+
+@media (min-width: 1024px) {
+  .mobile-member-bar {
+    display: none !important;
+  }
+
+  body.has-mobile-member-bar {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  input,
+  select,
+  textarea {
+    font-size: 1rem;
+  }
+}
