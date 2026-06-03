@@ -16,7 +16,7 @@
           "UDAAN technically supervised Film Development Board training for 25 trainees — professional standards for Nepal's film industry.",
         href: "events/fdb-drone-training-2026.html",
         image:
-          "assets/events/fdb-drone-training-2026.jpg",
+          "assets/events/fdb-drone-training-2026.webp",
         badge: "Training · Completed",
         tag: "Completed",
         tagStyle: "green",
@@ -41,7 +41,7 @@
           "National dialogue on regulatory frameworks, airspace security, and the future of drones in commerce, cinema, and emergency services.",
         href: "events/nepal-drone-seminar-2026.html",
         image:
-          "assets/events/nepal-drone-seminar-2026.jpg",
+          "assets/events/nepal-drone-seminar-2026.webp",
         badge: "Panel Discussion",
         tag: "Seminar",
         tagStyle: "secondary",
@@ -67,7 +67,7 @@
           "FPV basics, simulator practice, and hands-on learning with GarudX expert trainers — empowering Nepal's drone community.",
         href: "events/fpv-drone-training-2025.html",
         image:
-          "assets/events/fpv-drone-training-2025.jpg",
+          "assets/events/fpv-drone-training-2025.webp",
         badge: "FPV Workshop · Completed",
         tag: "Completed",
         tagStyle: "green",

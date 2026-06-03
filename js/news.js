@@ -12,7 +12,7 @@
         href: "news/drone-competency-certificates-2082.html",
         linkLabel: "Read More",
         image:
-          "assets/events/fdb-drone-training-2026.jpg",
+          "assets/events/fdb-drone-training-2026.webp",
         imageAlt:
           "Drone competency certificate and scholarship distribution ceremony at Film Development Board organized by UDAAN",
         hashtags: "#UDAAN #DroneTraining #YouthEmpowerment",
@@ -28,7 +28,7 @@
         href: "events/fdb-drone-training-2026.html",
         linkLabel: "Read More",
         image:
-          "assets/events/fdb-drone-training-2026.jpg",
+          "assets/events/fdb-drone-training-2026.webp",
         imageAlt: "FDB 10-day drone training session with instructor presenting to trainees at Film Development Board",
         hashtags: "#UDAAN #TechnicalSupervision #FilmDevelopmentBoard #DroneStandards #NepalCinema #AviationSafety",
       },
@@ -43,7 +43,7 @@
         href: "news/udaan-1st-anniversary-2026.html",
         linkLabel: "Read More",
         image:
-          "assets/images/udaan-community-gathering.jpg",
+          "assets/images/udaan-community-gathering.webp",
         imageAlt: "UDAAN team celebrating first anniversary at members meetup in Kathmandu",
         hashtags: "#UDAAN #1stAnniversary #DroneCommunity #Nepal #FlightPath #MembersMeetup #DroneInnovation",
       },
@@ -58,7 +58,7 @@
         href: "news/udaan-ndrrma-mou.html",
         linkLabel: "Read More",
         image:
-          "assets/news/udaan-ndrrma-mou.jpg",
+          "assets/news/udaan-ndrrma-mou.webp",
         imageAlt: "UDAAN and NDRRMA officials at MoU signing ceremony for emergency rescue and disaster management partnership",
         hashtags: "#UDAAN #NDRRMA #MoU #DisasterManagement",
       },
@@ -73,7 +73,7 @@
         href: "news/udaan-meets-minister-gupta.html",
         linkLabel: "Read Full Story",
         image:
-          "assets/images/government-industry-meeting.jpg",
+          "assets/images/government-industry-meeting.webp",
         imageAlt: "UDAAN delegation meeting with government officials to discuss drone sports regulation in Nepal",
         hashtags: "",
       },
@@ -88,7 +88,7 @@
         href: "events/fpv-drone-training-2025.html",
         linkLabel: "Read More",
         image:
-          "assets/events/fpv-drone-training-2025.jpg",
+          "assets/events/fpv-drone-training-2025.webp",
         imageAlt: "FPV drone frame being assembled with motors, flight controller, and tools during UDAAN hands-on training workshop",
         hashtags:
           "#UDAAN #FPVTraining #DroneNepal #FPVWorkshop #GarudXTeam #DroneCommunity #NepalDrone #TechForChange #LearningWithDrones",
@@ -104,7 +104,7 @@
         href: "news/south-asia-drone-forum-2025.html",
         linkLabel: "Read More",
         image:
-          "assets/images/udaan-community-gathering.jpg",
+          "assets/images/udaan-community-gathering.webp",
         imageAlt: "UDAAN team at South Asia Drone Forum 2025 in Kathmandu with regional aviation delegates",
         hashtags: "#UDAAN #SouthAsiaDroneForum #DroneNepal",
       },

@@ -1,23 +1,23 @@
 (function () {
   var DEFAULT_SLIDES = [
     {
-      src: "assets/images/hero-drone-himalayas-sunrise.jpg",
+      src: "assets/images/hero-drone-himalayas-sunrise.webp",
       alt: "Professional drone flying over snow-capped Himalayan peaks at sunrise",
     },
     {
-      src: "assets/images/hero-himalayas-dawn-drone.jpg",
+      src: "assets/images/hero-himalayas-dawn-drone.webp",
       alt: "Snow-capped Nepalese Himalayas at dawn with a professional drone in the foreground",
     },
     {
-      src: "assets/images/hero-himalayan-peaks-drone.jpg",
+      src: "assets/images/hero-himalayan-peaks-drone.webp",
       alt: "Himalayan peaks with a drone hovering in the foreground",
     },
     {
-      src: "assets/events/fdb-drone-training-2026.jpg",
+      src: "assets/events/fdb-drone-training-2026.webp",
       alt: "FDB drone training session at Film Development Board, Kathmandu",
     },
     {
-      src: "assets/events/nepal-drone-seminar-2026.jpg",
+      src: "assets/events/nepal-drone-seminar-2026.webp",
       alt: "National panel discussion on Nepal's drone ecosystem",
     },
   ];
@@ -37,7 +37,7 @@
         DEFAULT_SLIDES[1],
         DEFAULT_SLIDES[0],
         DEFAULT_SLIDES[4],
-        { src: "assets/events/fpv-drone-training-2025.jpg", alt: "FPV drone training workshop in Kathmandu" },
+        { src: "assets/events/fpv-drone-training-2025.webp", alt: "FPV drone training workshop in Kathmandu" },
       ],
     },
     contact: {
@@ -51,9 +51,9 @@
       align: "center",
       interval: 6000,
       slides: [
-        { src: "assets/events/fdb-drone-training-2026.jpg", alt: "FDB 10-day drone training 2026" },
-        { src: "assets/events/nepal-drone-seminar-2026.jpg", alt: "Nepal drone seminar panel discussion" },
-        { src: "assets/events/fpv-drone-training-2025.jpg", alt: "FPV drone basic training workshop" },
+        { src: "assets/events/fdb-drone-training-2026.webp", alt: "FDB 10-day drone training 2026" },
+        { src: "assets/events/nepal-drone-seminar-2026.webp", alt: "Nepal drone seminar panel discussion" },
+        { src: "assets/events/fpv-drone-training-2025.webp", alt: "FPV drone basic training workshop" },
         DEFAULT_SLIDES[2],
       ],
     },
@@ -63,10 +63,10 @@
       interval: 6500,
       slides: [
         {
-          src: "assets/images/disaster-response-drone.jpg",
+          src: "assets/images/disaster-response-drone.webp",
           alt: "Drone supporting disaster response and emergency operations in mountainous Nepal",
         },
-        { src: "assets/news/udaan-ndrrma-mou.jpg", alt: "UDAAN and NDRRMA disaster management partnership signing" },
+        { src: "assets/news/udaan-ndrrma-mou.webp", alt: "UDAAN and NDRRMA disaster management partnership signing" },
         DEFAULT_SLIDES[3],
         DEFAULT_SLIDES[0],
       ],
@@ -76,9 +76,9 @@
       align: "bottom",
       interval: 6500,
       slides: [
-        { src: "assets/news/udaan-ndrrma-mou.jpg", alt: "UDAAN disaster management partnership with NDRRMA" },
+        { src: "assets/news/udaan-ndrrma-mou.webp", alt: "UDAAN disaster management partnership with NDRRMA" },
         {
-          src: "assets/images/disaster-response-drone.jpg",
+          src: "assets/images/disaster-response-drone.webp",
           alt: "Disaster response drone operations in Nepal",
         },
         DEFAULT_SLIDES[0],
