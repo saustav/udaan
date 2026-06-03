@@ -12,20 +12,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Deploy site files to cPanel
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+      - name: Deploy site files to cPanel (SFTP)
+        uses: appleboy/scp-action@v0.1.7
         with:
-          server: ${{ secrets.CPANEL_FTP_HOST }}
+          host: ${{ secrets.CPANEL_FTP_HOST }}
           username: ${{ secrets.CPANEL_FTP_USERNAME }}
           password: ${{ secrets.CPANEL_FTP_PASSWORD }}
-          port: 21
-          protocol: ftp
-          local-dir: ./
-          server-dir: public_html/
-          exclude: |
-            **/.git*
-            **/.github/**
-            **/node_modules/**
-            **/.cursor/**
-            **/scripts/**
-            **/.DS_Store
+          port: 22
+          source: "."
+          target: "public_html"
+          rm: false
+          strip_components: 0
+          overwrite: true
