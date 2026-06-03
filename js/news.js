@@ -43,7 +43,7 @@
         href: "news/udaan-1st-anniversary-2026.html",
         linkLabel: "Read More",
         image:
-          "https://lh3.googleusercontent.com/aida-public/AB6AXuAkiCfur7YiSrCVKpar3PtKzEdVX4MjvXsmdy_VExOIKyIzD5CLeZ7dUIfpLO7xezNxuVrEusrbhjf8LxUAzu0wrrs9WngdGToPD6f_TpwuTrGNIpDrK-wexNKTHKoOUX-YQyUjUTXGxEg7OhG5t1XALfrXseSRba4a2VNcOPgm25W3jhbp1IPglnw4QgOFll5gdJklnSpYWRjycRHT7ZRotcMdKzquMsT3aWIaZa0d--vxGaHhNAUGg5bx8K3OCJTIrygOhgmucuM",
+          "assets/images/udaan-community-gathering.jpg",
         imageAlt: "UDAAN team celebrating first anniversary at members meetup in Kathmandu",
         hashtags: "#UDAAN #1stAnniversary #DroneCommunity #Nepal #FlightPath #MembersMeetup #DroneInnovation",
       },
@@ -73,7 +73,7 @@
         href: "news/udaan-meets-minister-gupta.html",
         linkLabel: "Read Full Story",
         image:
-          "https://lh3.googleusercontent.com/aida-public/AB6AXuDFsWkUHgtC_l5N9lnivYR2zLmnlqZRax5IsUTIeyfg3DH27iTsP5nVfgihg48mktpGtF64F8IHg9Nvzx2XYp5mUix591qpvraNBVqJF2PtwpqF8i3dKLWAoBnnyySyL664YeZ1yrpT_FPSVgtToJc5X7Ubl055f82U3dA2lU6KzytVpy-La6A2NHMOXa_RwBN_Oms5XDJ_3SWAA0NLH1_4MELsWz308R30ohft4pcVvkmQ9BD7OBRXoa-3vA1w-NiHRJimir5ETYY",
+          "assets/images/government-industry-meeting.jpg",
         imageAlt: "UDAAN delegation meeting with government officials to discuss drone sports regulation in Nepal",
         hashtags: "",
       },
@@ -104,7 +104,7 @@
         href: "news/south-asia-drone-forum-2025.html",
         linkLabel: "Read More",
         image:
-          "https://lh3.googleusercontent.com/aida-public/AB6AXuAkiCfur7YiSrCVKpar3PtKzEdVX4MjvXsmdy_VExOIKyIzD5CLeZ7dUIfpLO7xezNxuVrEusrbhjf8LxUAzu0wrrs9WngdGToPD6f_TpwuTrGNIpDrK-wexNKTHKoOUX-YQyUjUTXGxEg7OhG5t1XALfrXseSRba4a2VNcOPgm25W3jhbp1IPglnw4QgOFll5gdJklnSpYWRjycRHT7ZRotcMdKzquMsT3aWIaZa0d--vxGaHhNAUGg5bx8K3OCJTIrygOhgmucuM",
+          "assets/images/udaan-community-gathering.jpg",
         imageAlt: "UDAAN team at South Asia Drone Forum 2025 in Kathmandu with regional aviation delegates",
         hashtags: "#UDAAN #SouthAsiaDroneForum #DroneNepal",
       },

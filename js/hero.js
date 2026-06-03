@@ -1,15 +1,15 @@
 (function () {
   var DEFAULT_SLIDES = [
     {
-      src: "https://lh3.googleusercontent.com/aida-public/AB6AXuD88TpI4Ow06uxdF0FRygcsEA-KllzZduYWvFnTeF-eoKpNeyezJql3rp3pZr4HzjU50D1rmiOC0ZOh5t53WPtNe2Fd4X2wTHFzdLumtjpR0z2H92gLhsABn-D0PZqvpjAbXu9OaIGEZonNVUT63TjD8Qovaj23h0O3fRHJ_xCCQow9cEWMqK81zMSKzSOmOi33fFGtna-qyhDkNNror4NCOJq_N7mduzXlvSVowYbXuSCK9blUjop2ahehGIQvhiea2ISXqyg0El0",
+      src: "assets/images/hero-drone-himalayas-sunrise.jpg",
       alt: "Professional drone flying over snow-capped Himalayan peaks at sunrise",
     },
     {
-      src: "https://lh3.googleusercontent.com/aida-public/AB6AXuD-4fQPzteKvCzHrjYiTPxCNTPj_2hEULYY5Xei6Mm5j935PXifQCQd1quau5G-KSAM8rkSEDDclnAa40ljS6EfS4XjBoR6YxdiwY1QHX5TGvpoXFEyDi5ttznoUZ2NJ1dUqXboFUjEjwyMM6CdlzB58RIyUTl7UndBADgVEErierHRwiE6YVLeV9hEhhXP1Qe9AP_Dmbt34ruH_mTEn1pbun70X46H5sYckde9NJCfl8loO6E-5ya7UurXrjctv3nLAr535P2Nzww",
+      src: "assets/images/hero-himalayas-dawn-drone.jpg",
       alt: "Snow-capped Nepalese Himalayas at dawn with a professional drone in the foreground",
     },
     {
-      src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCbJcrwVtjiLqw1B3JvfpdNsT4EZsLeXTO2npwHoMdpKQg4bHl3WnezrB-W0x7EgmdJvy-SdK4wpiFZTpW2Z69L5jhF5VjDdmrPP1PwgkF9VajOlRxJXb2keHKvz9xKM_CcBLqZWB4AE0nwybRZogJd23W_LVsIcJIkx7siF9wLXEvU6-o8O9kr67eUI1yVnV5u9WQdyNsjCcmIpKhfQ_GounFdVlxRYmFaVes1qlQmFBikRK0KVw6F9rlqHjoDXclAQwjnB1MYYus",
+      src: "assets/images/hero-himalayan-peaks-drone.jpg",
       alt: "Himalayan peaks with a drone hovering in the foreground",
     },
     {
@@ -63,7 +63,7 @@
       interval: 6500,
       slides: [
         {
-          src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCr65G0-DMA5db8Pt2iOmnoH8Zv18YEUZomF8BAGXl3ukVxc2lmjOKQSRqgfekhLPDGfNkb8STGGEtv4bSlhx-bve3NzYy4de3aJ-egAiW8O-RcBZylv6j2hCc2eZlyFNMqEDErVNkXhbKrWnnPzblH3EQYthdjeVb9fS6eTA5Genc4myZCSBznOFEYPJO1XClX2dtC-NGlZ8ekUm7LGzAn4PLTB0htBg9Jahvt5tjBeqN7DkIyDv3EAAo3WvIf5YLkaZDrmj2Y_ac",
+          src: "assets/images/disaster-response-drone.jpg",
           alt: "Drone supporting disaster response and emergency operations in mountainous Nepal",
         },
         { src: "assets/news/udaan-ndrrma-mou.jpg", alt: "UDAAN and NDRRMA disaster management partnership signing" },
@@ -78,7 +78,7 @@
       slides: [
         { src: "assets/news/udaan-ndrrma-mou.jpg", alt: "UDAAN disaster management partnership with NDRRMA" },
         {
-          src: "https://lh3.googleusercontent.com/aida-public/AB6AXuCr65G0-DMA5db8Pt2iOmnoH8Zv18YEUZomF8BAGXl3ukVxc2lmjOKQSRqgfekhLPDGfNkb8STGGEtv4bSlhx-bve3NzYy4de3aJ-egAiW8O-RcBZylv6j2hCc2eZlyFNMqEDErVNkXhbKrWnnPzblH3EQYthdjeVb9fS6eTA5Genc4myZCSBznOFEYPJO1XClX2dtC-NGlZ8ekUm7LGzAn4PLTB0htBg9Jahvt5tjBeqN7DkIyDv3EAAo3WvIf5YLkaZDrmj2Y_ac",
+          src: "assets/images/disaster-response-drone.jpg",
           alt: "Disaster response drone operations in Nepal",
         },
         DEFAULT_SLIDES[0],
