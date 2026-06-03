@@ -1,0 +1,7 @@
+---
+# cPanel Git deployment — replace CPANEL_USERNAME with your cPanel account name.
+# Used when you click "Deploy HEAD Commit" in cPanel → Git Version Control.
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/CPANEL_USERNAME/public_html/
+    - /usr/bin/rsync -av --delete --exclude .git --exclude .github --exclude node_modules --exclude .cursor --exclude scripts ./ $DEPLOYPATH
