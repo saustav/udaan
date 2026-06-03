@@ -1,0 +1,48 @@
+{
+  "term": "2 years",
+  "totalMembers": 13,
+  "roles": [
+    {
+      "titleNe": "अध्यक्ष",
+      "titleEn": "President",
+      "count": 1,
+      "icon": "stars"
+    },
+    {
+      "titleNe": "उपाध्यक्ष",
+      "titleEn": "Vice President",
+      "count": 2,
+      "icon": "supervisor_account"
+    },
+    {
+      "titleNe": "महासचिव",
+      "titleEn": "General Secretary",
+      "count": 1,
+      "icon": "edit_note"
+    },
+    {
+      "titleNe": "सचिव",
+      "titleEn": "Secretary",
+      "count": 1,
+      "icon": "description"
+    },
+    {
+      "titleNe": "सहसचिव",
+      "titleEn": "Joint Secretary",
+      "count": 1,
+      "icon": "article"
+    },
+    {
+      "titleNe": "कोषाध्यक्ष",
+      "titleEn": "Treasurer",
+      "count": 1,
+      "icon": "account_balance_wallet"
+    },
+    {
+      "titleNe": "सदस्य",
+      "titleEn": "Members",
+      "count": 6,
+      "icon": "groups"
+    }
+  ]
+}

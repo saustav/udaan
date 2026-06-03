@@ -1,0 +1,17 @@
+{
+  "directors": [
+    { "name": "Raj Bhai Mahajan (Suwal)", "role": "President", "roleNe": "अध्यक्ष", "photo": "assets/board/raj-bhai-mahajan.png" },
+    { "name": "Pradhumna Mishra", "role": "Vice President", "roleNe": "उपाध्यक्ष", "photo": "assets/board/pradhumna-mishra.png" },
+    { "name": "Shashwat Rijal", "role": "Vice President", "roleNe": "उपाध्यक्ष", "photo": "assets/board/shashwat-rijal.png" },
+    { "name": "Prabin Bhattarai", "role": "General Secretary", "roleNe": "महासचिव", "photo": "assets/board/prabin-bhattarai.png" },
+    { "name": "Saustav Bhattarai", "role": "Secretary", "roleNe": "सचिव", "photo": "assets/board/saustav-bhattarai.png" },
+    { "name": "Adarsha Bhusal", "role": "Joint Secretary", "roleNe": "सहसचिव", "photo": "assets/board/adarsha-bhusal.png" },
+    { "name": "Kuber Dangol", "role": "Treasurer", "roleNe": "कोषाध्यक्ष", "photo": "assets/board/kuber-dangol.png" },
+    { "name": "Prashant Dhakal", "role": "Member", "roleNe": "सदस्य", "photo": "assets/board/prashant-dhakal.png" },
+    { "name": "Sushil Sainju", "role": "Member", "roleNe": "सदस्य", "photo": "assets/board/sushil-sainju.png" },
+    { "name": "Pema Tashi Tamang", "role": "Member", "roleNe": "सदस्य" },
+    { "name": "Roshan Pokhrel", "role": "Member", "roleNe": "सदस्य" },
+    { "name": "Sujan Khatiwada", "role": "Member", "roleNe": "सदस्य", "photo": "assets/board/sujan-khatiwada.png" },
+    { "name": "Sushil Dangi", "role": "Member", "roleNe": "सदस्य" }
+  ]
+}
