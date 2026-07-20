@@ -43,7 +43,7 @@
         href: "news/udaan-1st-anniversary-2026.html",
         linkLabel: "Read More",
         image:
-          "assets/images/udaan-community-gathering.webp",
+          "assets/images/udaan-1st-anniversary-2026.webp",
         imageAlt: "UDAAN team celebrating first anniversary at members meetup in Kathmandu",
         hashtags: "#UDAAN #1stAnniversary #DroneCommunity #Nepal #FlightPath #MembersMeetup #DroneInnovation",
       },
@@ -60,6 +60,7 @@
         image:
           "assets/news/udaan-ndrrma-mou.webp",
         imageAlt: "UDAAN and NDRRMA officials at MoU signing ceremony for emergency rescue and disaster management partnership",
+        imagePosition: "top center",
         hashtags: "#UDAAN #NDRRMA #MoU #DisasterManagement",
       },
       {
@@ -73,8 +74,9 @@
         href: "news/udaan-meets-minister-gupta.html",
         linkLabel: "Read Full Story",
         image:
-          "assets/images/government-industry-meeting.webp",
+          "assets/images/udaan-meets-minister-gupta.webp",
         imageAlt: "UDAAN delegation meeting with government officials to discuss drone sports regulation in Nepal",
+        imagePosition: "top center",
         hashtags: "",
       },
       {
@@ -104,8 +106,9 @@
         href: "news/south-asia-drone-forum-2025.html",
         linkLabel: "Read More",
         image:
-          "assets/images/udaan-community-gathering.webp",
+          "assets/images/south-asia-drone-forum-2025.webp",
         imageAlt: "UDAAN team at South Asia Drone Forum 2025 in Kathmandu with regional aviation delegates",
+        imagePosition: "top center",
         hashtags: "#UDAAN #SouthAsiaDroneForum #DroneNepal",
       },
     ],
@@ -158,9 +161,13 @@
       : "";
 
     var categoryHtml = item.category
-      ? '<span class="text-primary font-label uppercase text-[10px] font-black tracking-widest">' +
+      ? '<span class="text-primary font-label uppercase text-xs font-black tracking-widest">' +
         escapeHtml(item.category) +
         "</span>"
+      : "";
+
+    var imagePositionAttr = item.imagePosition
+      ? ' style="object-position: ' + escapeHtml(item.imagePosition) + ';"'
       : "";
 
     var cardInner =
@@ -169,7 +176,9 @@
       escapeHtml(item.imageAlt) +
       '" src="' +
       escapeHtml(item.image) +
-      '" loading="lazy"/></div>' +
+      '" loading="lazy"' +
+      imagePositionAttr +
+      "/></div>" +
       '<div class="p-6">' +
       categoryHtml +
       '<p class="text-lg font-bold mt-2 leading-tight group-hover:text-primary transition-colors duration-200">' +
@@ -179,9 +188,9 @@
       escapeHtml(item.description) +
       "</p>" +
       (item.href
-        ? '<span class="inline-flex items-center gap-1 text-primary font-bold text-sm mt-3 group-hover:underline">' +
+        ? '<span class="inline-flex items-center gap-1 text-primary-dark font-bold text-sm mt-3 group-hover:underline">' +
           escapeHtml(item.linkLabel || "Read More") +
-          ' <span class="material-symbols-outlined text-sm">arrow_forward</span></span>'
+          ' <span class="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span></span>'
         : "") +
       hashtagsHtml +
       '<p class="text-xs text-on-surface-variant mt-2">' +

@@ -41,7 +41,8 @@
       "registerUrl": "https://forms.gle/gA5v6WEN4GgPqzn78",
       "registrationTime": "Registration from 10:00 AM",
       "cta": "Event Details",
-      "accent": "secondary"
+      "accent": "secondary",
+      "featured": true
     }
   ]
 }

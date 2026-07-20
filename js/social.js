@@ -72,7 +72,7 @@
           item.href +
           '" rel="noopener noreferrer" target="_blank" aria-label="' +
           item.label +
-          '"><span class="material-symbols-outlined text-xl">' +
+          '"><span class="material-symbols-outlined text-xl" aria-hidden="true">' +
           item.icon +
           "</span></a>"
         );

@@ -51,6 +51,7 @@
         cta: "Event Details",
         accent: "secondary",
         category: "advocacy",
+        featured: true,
       },
       {
         id: "fpv-drone-training-2025",
@@ -111,11 +112,11 @@
   function renderHomeFeatured(event) {
     var accent = accentClass(event.accent);
     var scheduleHtml = event.registrationTime
-      ? '<div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">schedule</span> ' +
+      ? '<div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm" aria-hidden="true">schedule</span> ' +
         escapeHtml(event.registrationTime) +
         "</div>"
       : event.scheduleNote
-        ? '<div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">schedule</span> ' +
+        ? '<div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm" aria-hidden="true">schedule</span> ' +
           escapeHtml(event.scheduleNote) +
           "</div>"
         : "";
@@ -123,16 +124,16 @@
     var actionsHtml = "";
     if (event.registerUrl) {
       actionsHtml +=
-        '<a class="inline-flex items-center gap-2 bg-primary text-on-primary px-5 py-2.5 rounded-full font-bold text-sm hover:bg-primary-container transition-all" href="' +
+        '<a class="inline-flex items-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-full font-bold text-sm hover:bg-primary-container transition-all" href="' +
         escapeHtml(event.registerUrl) +
-        '" rel="noopener noreferrer" target="_blank">Register Now <span class="material-symbols-outlined text-sm">open_in_new</span></a>';
+        '" rel="noopener noreferrer" target="_blank">Register Now <span class="material-symbols-outlined text-sm" aria-hidden="true">open_in_new</span></a>';
     }
     actionsHtml +=
       '<a class="inline-flex items-center gap-2 text-secondary font-bold text-sm hover:underline" href="' +
       escapeHtml(event.href) +
       '">' +
       escapeHtml(event.cta || "Event Details") +
-      ' <span class="material-symbols-outlined text-sm">arrow_forward</span></a>';
+      ' <span class="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span></a>';
 
     return (
       '<div class="bg-surface-bright rounded-2xl overflow-hidden mb-6 flex flex-col md:flex-row shadow-card hover:shadow-card-hover transition-shadow duration-200 border border-outline-variant">' +
@@ -146,7 +147,7 @@
       escapeHtml(event.dateShort.month + " " + event.dateShort.year) +
       '</span><div class="w-12 h-1 bg-white/30 mt-6"></div></div>' +
       '<div class="p-8 flex-1">' +
-      '<span class="inline-block px-3 py-1 bg-primary/10 text-primary text-[10px] font-black uppercase tracking-tighter rounded mb-4">' +
+      '<span class="inline-block px-3 py-1 badge-label text-xs font-black uppercase tracking-tighter rounded mb-4">' +
       escapeHtml(event.badge) +
       "</span>" +
       '<p class="text-2xl font-bold mb-2">' +
@@ -155,11 +156,11 @@
       '<p class="text-on-surface-variant text-sm mb-4">' +
       escapeHtml(event.description) +
       '</p><div class="flex flex-wrap items-center gap-4 text-xs text-on-surface-variant mb-4">' +
-      '<div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">calendar_today</span> ' +
+      '<div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm" aria-hidden="true">calendar_today</span> ' +
       escapeHtml(event.dateLabel) +
       "</div>" +
       scheduleHtml +
-      '<div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">location_on</span> ' +
+      '<div class="flex items-center gap-2"><span class="material-symbols-outlined text-sm" aria-hidden="true">location_on</span> ' +
       escapeHtml(event.location) +
       '</div></div><div class="flex flex-wrap gap-3">' +
       actionsHtml +
@@ -174,31 +175,31 @@
       '"><div class="flex items-center gap-4"><div class="w-12 h-12 bg-surface-container-highest rounded flex flex-col items-center justify-center text-primary font-bold leading-none">' +
       '<span class="text-lg">' +
       escapeHtml(event.dateShort.day) +
-      '</span><span class="text-[10px] uppercase">' +
+      '</span><span class="text-xs uppercase">' +
       escapeHtml(event.dateShort.month) +
       '</span></div><div><p class="font-bold text-sm">' +
       escapeHtml(event.title) +
       '</p><p class="text-xs text-on-surface-variant">' +
       escapeHtml(event.location) +
       (event.status === "completed" ? " · Completed" : "") +
-      '</p></div></div><span class="material-symbols-outlined text-on-surface-variant">chevron_right</span></a>'
+      '</p></div></div><span class="material-symbols-outlined text-on-surface-variant" aria-hidden="true">chevron_right</span></a>'
     );
   }
 
   function renderEventsHero(event) {
     var scheduleHtml = event.registrationTime
-      ? '<span class="badge-trust bg-white/10 border-white/25 text-white backdrop-blur-sm"><span class="material-symbols-outlined text-sm">schedule</span> ' +
+      ? '<span class="badge-trust bg-white/10 border-white/25 text-white backdrop-blur-sm"><span class="material-symbols-outlined text-sm" aria-hidden="true">schedule</span> ' +
         escapeHtml(event.registrationTime) +
         "</span>"
       : event.scheduleNote
-        ? '<span class="badge-trust bg-white/10 border-white/25 text-white backdrop-blur-sm"><span class="material-symbols-outlined text-sm">schedule</span> ' +
+        ? '<span class="badge-trust bg-white/10 border-white/25 text-white backdrop-blur-sm"><span class="material-symbols-outlined text-sm" aria-hidden="true">schedule</span> ' +
           escapeHtml(event.scheduleNote) +
           "</span>"
         : "";
 
     return (
       '<div class="flex flex-wrap gap-3 mb-6">' +
-      '<span class="badge-trust bg-white/10 border-white/25 text-white backdrop-blur-sm"><span class="material-symbols-outlined text-sm">event</span> Latest Event</span>' +
+      '<span class="badge-trust bg-white/10 border-white/25 text-white backdrop-blur-sm"><span class="material-symbols-outlined text-sm" aria-hidden="true">event</span> Latest Event</span>' +
       '<span class="badge-trust bg-white/10 border-white/25 text-white backdrop-blur-sm">' +
       escapeHtml(event.badge) +
       "</span>" +
@@ -210,14 +211,14 @@
       '<p class="text-white/75 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl">' +
       escapeHtml(event.description) +
       '</p><div class="flex flex-wrap gap-4 mb-10">' +
-      '<div class="flex items-center gap-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-5 py-2.5 text-white">' +
-      '<span class="material-symbols-outlined text-primary-container">calendar_today</span><div>' +
+      '<div class="flex items-center gap-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-5 py-3 text-white">' +
+      '<span class="material-symbols-outlined text-primary-container" aria-hidden="true">calendar_today</span><div>' +
       '<p class="text-xs uppercase opacity-60 tracking-widest font-label">Date</p>' +
       '<p class="font-semibold text-sm">' +
       escapeHtml(event.dateLabel) +
       "</p></div></div>" +
-      '<div class="flex items-center gap-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-5 py-2.5 text-white">' +
-      '<span class="material-symbols-outlined text-primary-container">location_on</span><div>' +
+      '<div class="flex items-center gap-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-5 py-3 text-white">' +
+      '<span class="material-symbols-outlined text-primary-container" aria-hidden="true">location_on</span><div>' +
       '<p class="text-xs uppercase opacity-60 tracking-widest font-label">Location</p>' +
       '<p class="font-semibold text-sm">' +
       escapeHtml(event.location) +
@@ -226,7 +227,7 @@
       (event.registerUrl
         ? '<a class="btn-primary inline-flex items-center gap-2" href="' +
           escapeHtml(event.registerUrl) +
-          '" rel="noopener noreferrer" target="_blank">Register Now <span class="material-symbols-outlined">open_in_new</span></a>'
+          '" rel="noopener noreferrer" target="_blank">Register Now <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span></a>'
         : "") +
       '<a class="btn-secondary inline-flex items-center gap-2" href="' +
       escapeHtml(event.href) +
@@ -261,7 +262,7 @@
       '<p class="text-on-surface-variant text-sm mb-5 line-clamp-3 leading-relaxed">' +
       escapeHtml(event.descriptionShort || event.description) +
       '</p><div class="flex items-center gap-2 text-on-surface-variant text-sm">' +
-      '<span class="material-symbols-outlined text-sm">location_on</span> ' +
+      '<span class="material-symbols-outlined text-sm" aria-hidden="true">location_on</span> ' +
       escapeHtml(event.location) +
       '</div></div><div class="px-6 md:px-8 pb-6 md:pb-8 mt-auto">' +
       '<span class="block w-full py-3 rounded-full border-2 border-primary text-primary font-semibold text-center text-sm group-hover:bg-primary group-hover:text-white transition-colors duration-200 cursor-pointer">' +
@@ -270,14 +271,25 @@
     );
   }
 
+  function getHomeFeaturedEvent(events) {
+    var featured = events.find(function (event) {
+      return event.featured;
+    });
+    return featured || sortByLatest(events)[0];
+  }
+
   function renderHomeEvents(containerFeatured, containerList, events) {
     if (!events.length) return;
 
-    var sorted = sortByLatest(events);
-    containerFeatured.innerHTML = renderHomeFeatured(sorted[0]);
+    var featuredEvent = getHomeFeaturedEvent(events);
+    var listEvents = sortByLatest(events).filter(function (event) {
+      return event.id !== featuredEvent.id;
+    });
 
-    if (containerList && sorted.length > 1) {
-      containerList.innerHTML = sorted.slice(1).map(renderHomeListItem).join("");
+    containerFeatured.innerHTML = renderHomeFeatured(featuredEvent);
+
+    if (containerList && listEvents.length) {
+      containerList.innerHTML = listEvents.map(renderHomeListItem).join("");
     } else if (containerList) {
       containerList.innerHTML = "";
     }

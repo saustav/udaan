@@ -86,7 +86,7 @@ window.UDAAN_SITE_CONFIG = {
           item.href +
           '" rel="noopener noreferrer" target="_blank" aria-label="' +
           item.label +
-          '"><span class="material-symbols-outlined text-xl">' +
+          '"><span class="material-symbols-outlined text-xl" aria-hidden="true">' +
           item.icon +
           "</span></a>"
         );
@@ -166,7 +166,7 @@ window.UDAAN_SITE_CONFIG = {
       '<div class="relative group">' +
       '<a class="' +
       triggerClass +
-      ' flex items-center gap-1 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg px-1 py-0.5" href="' +
+      ' flex items-center gap-1 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg px-1 py-1" href="' +
       base +
       link.href +
       '"' +
@@ -238,8 +238,8 @@ window.UDAAN_SITE_CONFIG = {
     var mobileLinks = renderNavLinks(base, activePage, true);
 
     container.innerHTML =
-      '<nav class="fixed z-50 max-w-7xl mx-auto" aria-label="Main navigation">' +
-      '<div class="site-nav-bar flex justify-between items-center bg-surface-bright/90 backdrop-blur-md shadow-nav rounded-2xl border border-outline-variant/60 px-3 sm:px-6">' +
+      '<nav class="fixed z-50 inset-x-0 site-gutter" aria-label="Main navigation">' +
+      '<div class="site-nav-bar flex justify-between items-center bg-surface-bright/90 backdrop-blur-md shadow-nav rounded-2xl border border-outline-variant/60 px-4 sm:px-6 w-full max-w-7xl">' +
       '<a class="flex items-center shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg" href="' +
       base +
       'index.html" aria-label="UDAAN home">' +
@@ -377,7 +377,7 @@ window.UDAAN_SITE_CONFIG = {
       href +
       '" rel="noopener noreferrer" target="_blank" aria-label="' +
       label +
-      '"><span class="material-symbols-outlined text-xl">' +
+      '"><span class="material-symbols-outlined text-xl" aria-hidden="true">' +
       icon +
       "</span></a>"
     );
@@ -387,9 +387,9 @@ window.UDAAN_SITE_CONFIG = {
     if (!window.UDAAN_SOCIAL) return { profiles: "", share: "" };
 
     var iconClass =
-      "w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white";
+      "w-10 h-10 rounded-full bg-white text-primary hover:bg-primary-container hover:text-white transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white";
     var shareIconClass =
-      "w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white";
+      "w-9 h-9 rounded-full bg-white text-primary hover:bg-primary-container hover:text-white transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white";
 
     var profiles = window.UDAAN_SOCIAL.profileList()
       .map(function (item) {
@@ -420,7 +420,8 @@ window.UDAAN_SITE_CONFIG = {
 
     container.innerHTML =
       '<footer class="bg-primary text-white w-full mt-16" id="contact">' +
-      '<div class="grid grid-cols-1 md:grid-cols-4 gap-8 px-4 sm:px-6 md:px-8 py-14 max-w-7xl mx-auto">' +
+      '<div class="site-container">' +
+      '<div class="grid grid-cols-1 md:grid-cols-4 gap-8 py-14 w-full">' +
       '<div class="md:col-span-1">' +
       '<a class="inline-block mb-4 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white rounded-lg" href="' +
       base +
@@ -476,15 +477,16 @@ window.UDAAN_SITE_CONFIG = {
       '<p class="text-white/60 text-xs mb-4">Get regulatory updates and event announcements.</p>' +
       '<div class="flex gap-2">' +
       '<label class="sr-only" for="footer-email">Email address</label>' +
-      '<input class="bg-white/10 border border-white/20 text-white placeholder:text-white/40 px-4 py-2.5 text-sm rounded-xl focus:ring-2 focus:ring-accent focus:border-transparent outline-none w-full" id="footer-email" placeholder="Email address" type="email"/>' +
-      '<button class="bg-accent hover:bg-accent-light text-white px-4 py-2.5 rounded-xl font-semibold text-xs shrink-0 transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white" type="button">Join</button>' +
-      "</div></div></div>" +
-      '<div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">' +
+      '<input class="bg-white/10 border border-white/20 text-white placeholder:text-white/40 px-4 py-3 text-sm rounded-xl focus:ring-2 focus:ring-accent focus:border-transparent outline-none w-full" id="footer-email" placeholder="Email address" type="email"/>' +
+      '<button class="bg-accent hover:bg-accent-light text-white px-4 py-3 rounded-xl font-semibold text-xs shrink-0 transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white" type="button">Join</button>' +
+      "</div></div></div></div>" +
+      '<div class="site-container">' +
+      '<div class="py-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 w-full">' +
       '<p class="text-white/50 text-sm text-center md:text-left">© Nepal Unmanned Aircraft (Drone) Association — UDAAN. Regulated by Civil Aviation Authority of Nepal.</p>' +
       '<div class="flex gap-6">' +
       '<a class="text-white/50 text-sm hover:text-white transition-colors duration-200 cursor-pointer" href="#">Privacy Policy</a>' +
       '<a class="text-white/50 text-sm hover:text-white transition-colors duration-200 cursor-pointer" href="#">Terms of Service</a>' +
-      "</div></div></footer>";
+      "</div></div></div></footer>";
   }
 
   document.addEventListener("DOMContentLoaded", function () {

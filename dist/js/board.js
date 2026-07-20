@@ -62,7 +62,7 @@
           escapeHtml(social.linkedin) +
           '" aria-label="' +
           escapeHtml(director.name + " on LinkedIn") +
-          '" target="_blank" rel="noopener noreferrer"><span class="material-symbols-outlined text-lg">work</span></a>'
+          '" target="_blank" rel="noopener noreferrer"><span class="material-symbols-outlined text-lg" aria-hidden="true">work</span></a>'
       );
     }
     if (social.facebook) {
@@ -71,7 +71,7 @@
           escapeHtml(social.facebook) +
           '" aria-label="' +
           escapeHtml(director.name + " on Facebook") +
-          '" target="_blank" rel="noopener noreferrer"><span class="material-symbols-outlined text-lg">groups</span></a>'
+          '" target="_blank" rel="noopener noreferrer"><span class="material-symbols-outlined text-lg" aria-hidden="true">groups</span></a>'
       );
     }
     if (social.email) {
@@ -80,7 +80,7 @@
           escapeHtml(social.email) +
           '" aria-label="Email ' +
           escapeHtml(director.name) +
-          '"><span class="material-symbols-outlined text-lg">mail</span></a>'
+          '"><span class="material-symbols-outlined text-lg" aria-hidden="true">mail</span></a>'
       );
     }
 
@@ -95,7 +95,7 @@
 
     return (
       '<div class="text-center group bg-surface-bright rounded-2xl p-6 border border-outline-variant shadow-card card-interactive">' +
-      '<div class="aspect-square max-w-[160px] mx-auto rounded-full overflow-hidden mb-5 border-4 border-surface-container ' +
+      '<div class="aspect-square max-w-[160px] w-full rounded-full overflow-hidden mb-5 border-4 border-surface-container ' +
       borderClass +
       ' bg-surface-container flex items-center justify-center transition-colors duration-200">' +
       renderPhoto(director) +

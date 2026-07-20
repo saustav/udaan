@@ -63,7 +63,7 @@
       '<div class="relative group">' +
       '<a class="' +
       triggerClass +
-      ' flex items-center gap-1 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg px-1 py-0.5" href="' +
+      ' flex items-center gap-1 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg px-1 py-1" href="' +
       base +
       link.href +
       '"' +
@@ -135,8 +135,8 @@
     var mobileLinks = renderNavLinks(base, activePage, true);
 
     container.innerHTML =
-      '<nav class="fixed z-50 max-w-7xl mx-auto" aria-label="Main navigation">' +
-      '<div class="site-nav-bar flex justify-between items-center bg-surface-bright/90 backdrop-blur-md shadow-nav rounded-2xl border border-outline-variant/60 px-3 sm:px-6">' +
+      '<nav class="fixed z-50 inset-x-0 site-gutter" aria-label="Main navigation">' +
+      '<div class="site-nav-bar flex justify-between items-center bg-surface-bright/90 backdrop-blur-md shadow-nav rounded-2xl border border-outline-variant/60 px-4 sm:px-6 w-full max-w-7xl">' +
       '<a class="flex items-center shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg" href="' +
       base +
       'index.html" aria-label="UDAAN home">' +

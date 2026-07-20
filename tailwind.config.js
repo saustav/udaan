@@ -9,6 +9,22 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
+    /* Six-size type scale: xs 12 · sm 14 · base/lg 16 · xl 20 · 2xl/3xl 24 · 4xl+ 36 */
+    fontSize: {
+      xs: ["0.75rem", { lineHeight: "1rem" }],
+      sm: ["0.875rem", { lineHeight: "1.25rem" }],
+      base: ["1rem", { lineHeight: "1.5rem" }],
+      lg: ["1rem", { lineHeight: "1.5rem" }],
+      xl: ["1.25rem", { lineHeight: "1.75rem" }],
+      "2xl": ["1.5rem", { lineHeight: "2rem" }],
+      "3xl": ["1.5rem", { lineHeight: "2rem" }],
+      "4xl": ["2.25rem", { lineHeight: "2.5rem" }],
+      "5xl": ["2.25rem", { lineHeight: "2.5rem" }],
+      "6xl": ["2.25rem", { lineHeight: "2.5rem" }],
+      "7xl": ["2.25rem", { lineHeight: "2.5rem" }],
+      "8xl": ["2.25rem", { lineHeight: "2.5rem" }],
+      "9xl": ["2.25rem", { lineHeight: "2.5rem" }],
+    },
     extend: {
       colors: {
         primary: "#142C8D",
