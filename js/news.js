@@ -128,9 +128,9 @@
   function renderNewsCard(item) {
     if (item.compact) {
       var compactInner =
-        '<h4 class="text-lg font-bold leading-tight group-hover:text-primary transition-colors duration-200">' +
+        '<p class="text-lg font-bold leading-tight group-hover:text-primary transition-colors duration-200">' +
         escapeHtml(item.title) +
-        "</h4>" +
+        "</p>" +
         '<p class="text-on-surface-variant text-sm mt-2 line-clamp-2">' +
         escapeHtml(item.description) +
         "</p>" +
@@ -172,9 +172,9 @@
       '" loading="lazy"/></div>' +
       '<div class="p-6">' +
       categoryHtml +
-      '<h4 class="text-lg font-bold mt-2 leading-tight group-hover:text-primary transition-colors duration-200">' +
+      '<p class="text-lg font-bold mt-2 leading-tight group-hover:text-primary transition-colors duration-200">' +
       escapeHtml(item.title) +
-      "</h4>" +
+      "</p>" +
       '<p class="text-on-surface-variant text-sm mt-2 line-clamp-3">' +
       escapeHtml(item.description) +
       "</p>" +

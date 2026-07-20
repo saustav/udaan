@@ -2,7 +2,10 @@
   "name": "udaan-website",
   "private": true,
   "scripts": {
-    "build:css": "tailwindcss -i ./css/tailwind-src.css -o ./css/tailwind.css --minify",
+    "build:css": "tailwindcss -i ./css/tailwind-src.css -o ./css/tailwind.css --minify && cat css/tailwind.css css/site.css > css/app.css",
+    "build:js": "cat js/site-config.js js/social.js js/nav.js js/footer.js > js/core.js",
+    "build:images": "python3 scripts/optimize-images.py",
+    "build": "npm run build:css && npm run build:js",
     "build:dist": "./scripts/build-dist.sh"
   },
   "devDependencies": {

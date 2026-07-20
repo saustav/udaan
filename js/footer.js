@@ -14,8 +14,54 @@
     return "";
   }
 
+  function renderSocialIconLink(href, label, icon, className) {
+    return (
+      '<a class="' +
+      className +
+      '" href="' +
+      href +
+      '" rel="noopener noreferrer" target="_blank" aria-label="' +
+      label +
+      '"><span class="material-symbols-outlined text-xl">' +
+      icon +
+      "</span></a>"
+    );
+  }
+
+  function renderFooterSocialBlocks() {
+    if (!window.UDAAN_SOCIAL) return { profiles: "", share: "" };
+
+    var iconClass =
+      "w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white";
+    var shareIconClass =
+      "w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white";
+
+    var profiles = window.UDAAN_SOCIAL.profileList()
+      .map(function (item) {
+        return renderSocialIconLink(item.href, "Follow UDAAN on " + item.label, item.icon, iconClass);
+      })
+      .join("");
+
+    profiles +=
+      renderSocialIconLink(
+        "mailto:info@udaan.org.np",
+        "Email UDAAN",
+        "mail",
+        iconClass
+      );
+
+    var share = window.UDAAN_SOCIAL.shareList()
+      .map(function (item) {
+        return renderSocialIconLink(item.href, item.label, item.icon, shareIconClass);
+      })
+      .join("");
+
+    return { profiles: profiles, share: share };
+  }
+
   function renderFooter(container) {
     var base = getBasePath();
+    var social = renderFooterSocialBlocks();
 
     container.innerHTML =
       '<footer class="bg-primary text-white w-full mt-16" id="contact">' +
@@ -32,13 +78,16 @@
       '<p class="text-white/70 text-sm leading-relaxed mb-1" lang="ne">नेपाल मानव रहित विमान (ड्रोन) संघ</p>' +
       '<p class="text-white/60 text-sm leading-relaxed mb-3">Promoting safe, responsible, and sustainable unmanned aircraft operations across Nepal.</p>' +
       '<p class="text-white/50 text-xs leading-relaxed">Reg. No. 207 · 2081/12/22<br/>Sanstha Darta Ain, 2034, Dafa 4</p>' +
-      '<div class="flex gap-3 mt-6">' +
-      '<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white" href="#" aria-label="Website"><span class="material-symbols-outlined text-xl">public</span></a>' +
-      '<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white" href="#" aria-label="Share"><span class="material-symbols-outlined text-xl">share</span></a>' +
-      '<a class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white" href="mailto:info@udaan.org.np" aria-label="Email"><span class="material-symbols-outlined text-xl">mail</span></a>' +
+      '<p class="text-white/60 text-xs font-semibold uppercase tracking-widest mt-6 mb-3">Follow UDAAN</p>' +
+      '<div class="flex flex-wrap gap-3">' +
+      social.profiles +
+      "</div>" +
+      '<p class="text-white/60 text-xs font-semibold uppercase tracking-widest mt-5 mb-3">Share this page</p>' +
+      '<div class="flex flex-wrap gap-2">' +
+      social.share +
       "</div></div>" +
       "<div>" +
-      '<h4 class="font-semibold text-white mb-5 font-headline">Quick Links</h4>' +
+      '<p class="font-semibold text-white mb-5 font-headline">Quick Links</p>' +
       '<ul class="space-y-3 text-sm">' +
       '<li><a class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer" href="' +
       base +
@@ -60,7 +109,7 @@
       'contact.html#contact-form">Membership Inquiries</a></li>' +
       "</ul></div>" +
       "<div>" +
-      '<h4 class="font-semibold text-white mb-5 font-headline">Office</h4>' +
+      '<p class="font-semibold text-white mb-5 font-headline">Office</p>' +
       '<ul class="space-y-4 text-sm text-white/70">' +
       '<li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent text-lg shrink-0">location_on</span><span>Kathmandu Metropolitan City<br/>Ward No. 29, Nepal</span></li>' +
       '<li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent text-lg shrink-0">account_balance</span><span>Registered with:<br/>District Administration Office<br/>Babarmahal, Kathmandu</span></li>' +
@@ -68,7 +117,7 @@
       '<li class="flex items-center gap-3"><span class="material-symbols-outlined text-accent text-lg shrink-0">alternate_email</span><a class="hover:text-white transition-colors duration-200 cursor-pointer" href="mailto:info@udaan.org.np">info@udaan.org.np</a></li>' +
       "</ul></div>" +
       "<div>" +
-      '<h4 class="font-semibold text-white mb-5 font-headline">Subscribe</h4>' +
+      '<p class="font-semibold text-white mb-5 font-headline">Subscribe</p>' +
       '<p class="text-white/60 text-xs mb-4">Get regulatory updates and event announcements.</p>' +
       '<div class="flex gap-2">' +
       '<label class="sr-only" for="footer-email">Email address</label>' +

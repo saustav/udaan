@@ -148,9 +148,6 @@
       desktopLinks +
       "</div>" +
       '<div class="flex items-center gap-3">' +
-      '<a class="hidden sm:inline-flex bg-cta hover:bg-primary-container text-on-primary px-5 py-2.5 rounded-full font-semibold transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 text-sm" href="' +
-      base +
-      'contact.html#contact-form">Become a Member</a>' +
       '<button type="button" id="mobile-menu-btn" class="lg:hidden flex items-center justify-center min-w-[44px] min-h-[44px] p-2 rounded-xl text-on-surface hover:bg-surface-container transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" aria-expanded="false" aria-controls="mobile-menu">' +
       '<span class="sr-only">Toggle menu</span>' +
       '<span class="material-symbols-outlined text-2xl" id="menu-icon-open">menu</span>' +
@@ -200,7 +197,6 @@
       "</a>";
 
     document.body.appendChild(bar);
-    document.body.classList.add("has-mobile-member-bar");
   }
 
   function setupMobileMenu(container) {

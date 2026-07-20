@@ -149,9 +149,9 @@
       '<span class="inline-block px-3 py-1 bg-primary/10 text-primary text-[10px] font-black uppercase tracking-tighter rounded mb-4">' +
       escapeHtml(event.badge) +
       "</span>" +
-      '<h3 class="text-2xl font-bold mb-2">' +
+      '<p class="text-2xl font-bold mb-2">' +
       escapeHtml(event.title) +
-      "</h3>" +
+      "</p>" +
       '<p class="text-on-surface-variant text-sm mb-4">' +
       escapeHtml(event.description) +
       '</p><div class="flex flex-wrap items-center gap-4 text-xs text-on-surface-variant mb-4">' +
@@ -176,9 +176,9 @@
       escapeHtml(event.dateShort.day) +
       '</span><span class="text-[10px] uppercase">' +
       escapeHtml(event.dateShort.month) +
-      '</span></div><div><h4 class="font-bold text-sm">' +
+      '</span></div><div><p class="font-bold text-sm">' +
       escapeHtml(event.title) +
-      '</h4><p class="text-xs text-on-surface-variant">' +
+      '</p><p class="text-xs text-on-surface-variant">' +
       escapeHtml(event.location) +
       (event.status === "completed" ? " · Completed" : "") +
       '</p></div></div><span class="material-symbols-outlined text-on-surface-variant">chevron_right</span></a>'
@@ -255,9 +255,9 @@
       '<div class="text-sm font-semibold text-primary mb-2">' +
       escapeHtml(event.dateGrid) +
       "</div>" +
-      '<h3 class="text-xl md:text-2xl font-headline font-bold text-on-surface mb-3 leading-tight group-hover:text-primary transition-colors duration-200">' +
+      '<p class="text-xl md:text-2xl font-headline font-bold text-on-surface mb-3 leading-tight group-hover:text-primary transition-colors duration-200">' +
       escapeHtml(event.title) +
-      "</h3>" +
+      "</p>" +
       '<p class="text-on-surface-variant text-sm mb-5 line-clamp-3 leading-relaxed">' +
       escapeHtml(event.descriptionShort || event.description) +
       '</p><div class="flex items-center gap-2 text-on-surface-variant text-sm">' +

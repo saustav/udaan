@@ -1,10 +1,42 @@
+@font-face {
+  font-family: "Lexend Fallback";
+  src: local("Arial");
+  size-adjust: 108%;
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Source Sans 3 Fallback";
+  src: local("Arial");
+  size-adjust: 100%;
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+}
+
 body {
-  font-family: "Source Sans 3", system-ui, sans-serif;
+  font-family: "Source Sans 3", "Source Sans 3 Fallback", system-ui, sans-serif;
+}
+
+.font-headline,
+.font-label {
+  font-family: "Lexend", "Lexend Fallback", system-ui, sans-serif;
 }
 
 .material-symbols-outlined {
+  font-family: "Material Symbols Outlined", sans-serif;
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
   vertical-align: middle;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -130,6 +162,52 @@ body {
 }
 
 /* —— Consistent hero slider (Trust & Authority pattern) —— */
+/* Reserve hero layout before hero.js upgrades the DOM (prevents CLS) */
+[data-udaan-hero] {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+[data-udaan-hero="home"] {
+  align-items: center;
+  min-height: calc(100vh - 7rem);
+}
+
+[data-udaan-hero="about"],
+[data-udaan-hero="contact"],
+[data-udaan-hero="events"],
+[data-udaan-hero="programs"] {
+  align-items: center;
+  min-height: 70vh;
+}
+
+[data-udaan-hero="dmd"],
+[data-udaan-hero="detail"] {
+  align-items: flex-end;
+  min-height: 60vh;
+}
+
+@media (min-width: 768px) {
+  [data-udaan-hero="about"],
+  [data-udaan-hero="contact"],
+  [data-udaan-hero="events"],
+  [data-udaan-hero="programs"] {
+    min-height: min(720px, calc(100vh - 7rem));
+  }
+
+  [data-udaan-hero="dmd"],
+  [data-udaan-hero="detail"] {
+    min-height: 65vh;
+  }
+}
+
+[data-udaan-hero] > .relative.z-10 {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
 .udaan-hero {
   position: relative;
   display: flex;
@@ -546,7 +624,7 @@ footer {
 }
 
 @media (max-width: 1023px) {
-  body.has-mobile-member-bar {
+  body:has(#site-nav:not([data-page="contact"])) {
     padding-bottom: calc(4.75rem + env(safe-area-inset-bottom, 0px));
   }
 }
@@ -554,10 +632,6 @@ footer {
 @media (min-width: 1024px) {
   .mobile-member-bar {
     display: none !important;
-  }
-
-  body.has-mobile-member-bar {
-    padding-bottom: 0;
   }
 }
 

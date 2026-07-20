@@ -3,6 +3,18 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/><meta name="theme-color" content="#142C8D"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link rel="preload" href="css/app.css" as="style"/>
+<link rel="stylesheet" href="css/app.css"/>
+<link rel="preload" href="https://fonts.gstatic.com/s/lexend/v26/wlptgwvFAVdoq2_F94zlCfv0bz1WC9wRzLlneoCrCEswgqSP.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="https://fonts.gstatic.com/s/sourcesans3/v19/nwpBtKy2OAdR1K-IwhWudF-R9QMylBJAV3Bo8Ky462EK9CsYm4fA1Ts.woff2" as="font" type="font/woff2" crossorigin/>
+<link rel="preload" href="https://fonts.gstatic.com/s/materialsymbolsoutlined/v344/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1v-p_4MrImHCIJIZrDCvHOejbd5zrDAt.woff2" as="font" type="font/woff2" crossorigin/>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap"/></noscript>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" media="print" onload="this.media='all'"/>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"/></noscript>
 
 <title>Contact | Nepal Unmanned Aircraft (Drone) Association — UDAAN</title>
 <meta name="description" content="Contact UDAAN for membership inquiries, drone operations guidance, and regulatory support. Office in Kathmandu Metropolitan City, Ward No. 29."/>
@@ -31,15 +43,8 @@
 <!-- Robots -->
 <meta name="robots" content="index, follow"/>
 <link rel="icon" href="assets/udaan-logo.svg" type="image/svg+xml"/>
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" sizes="180x180"/>
 <link rel="sitemap" type="application/xml" href="/sitemap.xml"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link rel="stylesheet" href="css/tailwind.css"/>
-<link rel="stylesheet" href="css/site.css"/>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'"/>
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap"/></noscript>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" media="print" onload="this.media='all'"/>
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"/></noscript>
 <script src="js/hero.js" defer></script>
 </head>
 <body class="bg-surface text-on-surface font-body antialiased">
@@ -161,11 +166,13 @@ Membership Inquiry Form
 </div>
 <div>
 <h3 class="text-sm font-semibold text-secondary uppercase tracking-widest mb-1">Follow UDAAN</h3>
-<div class="flex gap-3 mt-2">
-<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" href="#" aria-label="Website"><span class="material-symbols-outlined text-xl">public</span></a>
-<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" href="#" aria-label="Video library"><span class="material-symbols-outlined text-xl">video_library</span></a>
-<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" href="mailto:info@udaan.org.np" aria-label="Email"><span class="material-symbols-outlined text-xl">mail</span></a>
+<div class="flex flex-wrap gap-3 mt-2" id="contact-social-links">
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" href="https://www.facebook.com/p/UDAAN-Unmanned-Aircraft-Association-of-Nepal-61573936520305/" rel="noopener noreferrer" target="_blank" aria-label="Follow UDAAN on Facebook"><span class="material-symbols-outlined text-xl">groups</span></a>
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" href="https://www.linkedin.com/company/udaannepal" rel="noopener noreferrer" target="_blank" aria-label="Follow UDAAN on LinkedIn"><span class="material-symbols-outlined text-xl">work</span></a>
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" href="mailto:info@udaan.org.np" aria-label="Email UDAAN"><span class="material-symbols-outlined text-xl">mail</span></a>
 </div>
+<p class="text-sm font-semibold text-secondary uppercase tracking-widest mt-5 mb-2">Share this page</p>
+<div class="flex flex-wrap gap-2" id="contact-share-links"></div>
 </div>
 </div>
 </div>
@@ -297,9 +304,7 @@ Send Inquiry
 </main>
 
 <div id="site-footer"></div>
-<script src="js/nav.js" defer></script>
-<script src="js/site-config.js" defer></script>
+<script src="js/core.js" defer></script>
 <script src="js/contact.js" defer></script>
-<script src="js/footer.js" defer></script>
 </body>
 </html>

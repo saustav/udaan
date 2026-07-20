@@ -1,0 +1,17 @@
+# UTF-8 charset in HTTP headers (in addition to <meta charset> in HTML)
+AddDefaultCharset UTF-8
+
+# Canonical URL: https://udaan.org.np
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# 1) www → non-www (301 permanent)
+RewriteCond %{HTTP_HOST} ^www\.udaan\.org\.np$ [NC]
+RewriteRule ^ https://udaan.org.np%{REQUEST_URI} [R=301,L]
+
+# 2) HTTP → HTTPS on apex (301 permanent)
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^udaan\.org\.np$ [NC]
+RewriteRule ^ https://udaan.org.np%{REQUEST_URI} [R=301,L]
+</IfModule>

@@ -6,7 +6,7 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 DIST="$ROOT/dist"
 
 if [[ -f "$ROOT/package.json" ]]; then
-  (cd "$ROOT" && npm run build:css)
+  (cd "$ROOT" && npm run build)
 fi
 
 rm -rf "$DIST"
@@ -19,7 +19,7 @@ copy_item() {
 # Root pages and site metadata
 for item in \
   index.html about.html contact.html events.html programs.html \
-  robots.txt sitemap.xml; do
+  robots.txt sitemap.xml .htaccess; do
   if [[ -e "$ROOT/$item" ]]; then
     cp "$ROOT/$item" "$DIST/"
   fi
