@@ -782,3 +782,29 @@ footer {
 .object-top {
   object-position: top center;
 }
+
+/* Centered icon tiles (membership, pillars, avatars) */
+.card-icon-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: auto;
+}
+
+.card-icon-tile > .material-symbols-outlined {
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+}
+
+#board-grid .board-avatar > .material-symbols-outlined,
+#board-grid .board-avatar > .board-avatar-placeholder {
+  font-size: 3rem;
+  width: 1em;
+  height: 1em;
+  color: #79747e;
+}
+
+#board-grid .board-avatar > img {
+  object-position: center center;
+}

@@ -49,7 +49,7 @@
       );
     }
 
-    return '<span class="material-symbols-outlined text-5xl text-outline">person</span>';
+    return '<span class="material-symbols-outlined board-avatar-placeholder" aria-hidden="true">person</span>';
   }
 
   function renderSocialLinks(director) {
@@ -95,7 +95,7 @@
 
     return (
       '<div class="text-center group bg-surface-bright rounded-2xl p-6 border border-outline-variant shadow-card card-interactive">' +
-      '<div class="aspect-square max-w-[160px] w-full mx-auto rounded-full overflow-hidden mb-5 border-4 border-surface-container ' +
+      '<div class="board-avatar aspect-square max-w-[160px] w-full mx-auto rounded-full overflow-hidden mb-5 border-4 border-surface-container ' +
       borderClass +
       ' bg-surface-container flex items-center justify-center transition-colors duration-200">' +
       renderPhoto(director) +
