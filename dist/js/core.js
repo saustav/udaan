@@ -119,6 +119,9 @@ window.UDAAN_SITE_CONFIG = {
     { id: "events", label: "Events", href: "events.html" },
   ];
 
+  var MEMBER_JOIN_URL = "http://member.udaan.org.np/";
+  var MEMBER_LOGIN_URL = "http://member.udaan.org.np/member/login.php";
+
   function getBasePath() {
     if (document.querySelector("base[href]")) {
       return "";
@@ -231,6 +234,28 @@ window.UDAAN_SITE_CONFIG = {
     }).join(forMobile ? "" : "");
   }
 
+  function renderMemberActions(forMobile) {
+    var loginClass = forMobile
+      ? "mobile-nav-link py-3 px-4 rounded-xl text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+      : "hidden lg:inline-flex items-center whitespace-nowrap text-sm font-semibold text-primary border border-primary/30 hover:bg-primary/5 px-4 py-2 rounded-full transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
+    var joinClass = forMobile
+      ? "mt-2 text-center bg-cta hover:bg-primary-container text-on-primary px-5 py-3 rounded-full font-semibold transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+      : "hidden lg:inline-flex items-center whitespace-nowrap text-sm font-semibold bg-cta hover:bg-primary-container text-on-primary px-4 py-2 rounded-full transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-cta";
+
+    return (
+      '<a class="' +
+      loginClass +
+      '" href="' +
+      MEMBER_LOGIN_URL +
+      '" target="_blank" rel="noopener noreferrer">Member Login</a>' +
+      '<a class="' +
+      joinClass +
+      '" href="' +
+      MEMBER_JOIN_URL +
+      '" target="_blank" rel="noopener noreferrer">Become a Member</a>'
+    );
+  }
+
   function renderNav(container) {
     var base = getBasePath();
     var activePage = container.dataset.page || resolveActivePage();
@@ -250,7 +275,8 @@ window.UDAAN_SITE_CONFIG = {
       '<div class="hidden lg:flex items-center gap-8">' +
       desktopLinks +
       "</div>" +
-      '<div class="flex items-center gap-3">' +
+      '<div class="flex items-center gap-2 sm:gap-3">' +
+      renderMemberActions(false) +
       '<button type="button" id="mobile-menu-btn" class="lg:hidden flex items-center justify-center min-w-[44px] min-h-[44px] p-2 rounded-xl text-on-surface hover:bg-surface-container transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary" aria-expanded="false" aria-controls="mobile-menu">' +
       '<span class="sr-only">Toggle menu</span>' +
       '<span class="material-symbols-outlined text-2xl" id="menu-icon-open">menu</span>' +
@@ -258,9 +284,9 @@ window.UDAAN_SITE_CONFIG = {
       '<div id="mobile-menu" class="hidden lg:hidden mt-2 bg-surface-bright/95 backdrop-blur-md rounded-2xl border border-outline-variant/60 shadow-nav overflow-hidden">' +
       '<div class="flex flex-col p-4">' +
       mobileLinks +
-      '<a class="mt-4 text-center bg-cta hover:bg-primary-container text-on-primary px-5 py-3 rounded-full font-semibold transition-colors duration-200 cursor-pointer" href="' +
-      base +
-      'contact.html#contact-form">Become a Member</a>' +
+      '<div class="mt-4 flex flex-col">' +
+      renderMemberActions(true) +
+      "</div>" +
       "</div></div></nav>";
   }
 
@@ -280,7 +306,7 @@ window.UDAAN_SITE_CONFIG = {
     }
   }
 
-  function renderMobileMemberBar(base, activePage) {
+  function renderMobileMemberBar(activePage) {
     if (activePage === "contact") return;
 
     var existing = document.getElementById("mobile-member-bar");
@@ -293,8 +319,8 @@ window.UDAAN_SITE_CONFIG = {
     bar.setAttribute("aria-label", "Membership call to action");
     bar.innerHTML =
       '<a class="mobile-member-bar__link" href="' +
-      base +
-      'contact.html#contact-form">' +
+      MEMBER_JOIN_URL +
+      '" target="_blank" rel="noopener noreferrer">' +
       '<span class="mobile-member-bar__label">Become a Member</span>' +
       '<span class="material-symbols-outlined mobile-member-bar__icon" aria-hidden="true">arrow_forward</span>' +
       "</a>";
@@ -335,12 +361,11 @@ window.UDAAN_SITE_CONFIG = {
     var container = document.getElementById("site-nav");
     if (!container) return;
 
-    var base = getBasePath();
     var activePage = container.dataset.page || resolveActivePage();
 
     renderNav(container);
     setupMobileMenu(container);
-    renderMobileMemberBar(base, activePage);
+    renderMobileMemberBar(activePage);
 
     container.addEventListener("click", function (e) {
       var link = e.target.closest('a[href$="index.html"]');
