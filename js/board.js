@@ -41,7 +41,7 @@
     if (director.photo) {
       var alt = escapeHtml(director.name + ", " + director.role);
       return (
-        '<img class="w-full h-full object-cover" src="' +
+        '<img class="w-full h-full object-cover object-center" src="' +
         escapeHtml(director.photo) +
         '" alt="' +
         alt +
@@ -95,7 +95,7 @@
 
     return (
       '<div class="text-center group bg-surface-bright rounded-2xl p-6 border border-outline-variant shadow-card card-interactive">' +
-      '<div class="aspect-square max-w-[160px] w-full rounded-full overflow-hidden mb-5 border-4 border-surface-container ' +
+      '<div class="aspect-square max-w-[160px] w-full mx-auto rounded-full overflow-hidden mb-5 border-4 border-surface-container ' +
       borderClass +
       ' bg-surface-container flex items-center justify-center transition-colors duration-200">' +
       renderPhoto(director) +
