@@ -97,7 +97,7 @@
 
   function tagClass(tagStyle) {
     if (tagStyle === "green") {
-      return "bg-green-600 text-white";
+      return "bg-green-700 text-white";
     }
     if (tagStyle === "secondary") {
       return "bg-secondary text-white";
