@@ -139,6 +139,21 @@
         hashtags: "",
       },
       {
+        id: "drone-registration-fee-concern-2025",
+        date: "2025-04-13",
+        dateDisplay: "13 April 2025",
+        category: "Policy Alert",
+        title: "Concern Over 400-Fold Drone Registration Fee Increase",
+        description:
+          "UDAAN wrote to the Ministry of Culture, Tourism and Civil Aviation about a roughly 400-fold increase in drone registration fees, made without consulting stakeholders, and requested a meeting.",
+        href: "news/drone-registration-fee-concern-2025.html",
+        linkLabel: "Read More",
+        image: "assets/images/drone-registration-fee-policy.webp",
+        imageAlt: "UDAAN representatives meeting with government officials about drone registration policy",
+        imagePosition: "top center",
+        hashtags: "#UDAAN #DroneRegistration #PolicyAdvocacy #Nepal",
+      },
+      {
         id: "fpv-drone-training-2025",
         date: "2025-07-24",
         dateDisplay: "July 24, 2025",
