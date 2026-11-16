@@ -3,8 +3,8 @@
 
   function getEndpoint(form) {
     var config = window.UDAAN_SITE_CONFIG || {};
-    if (config.formspreeEndpoint && config.formspreeEndpoint.indexOf(PLACEHOLDER) === -1) {
-      return config.formspreeEndpoint;
+    if (config.formEndpoint && config.formEndpoint.indexOf(PLACEHOLDER) === -1) {
+      return config.formEndpoint;
     }
     var action = form.getAttribute("action") || "";
     if (action && action.indexOf(PLACEHOLDER) === -1) {
@@ -30,8 +30,15 @@
     if (!form) return;
 
     var statusEl = document.getElementById("contact-form-status");
-    var submitBtn = form.querySelector('[type="submit"]");
+    var submitBtn = form.querySelector('[type="submit"]');
     var endpoint = getEndpoint(form);
+
+    var params = new URLSearchParams(window.location.search);
+    if (statusEl && params.get("sent") === "1") {
+      setStatus(statusEl, "success", "Thank you! Your inquiry has been sent. We will respond within 2–3 business days.");
+    } else if (statusEl && params.get("error") === "1") {
+      setStatus(statusEl, "error", "Sorry, your message could not be sent. Please email info@udaan.org.np or call 01-4536-9808.");
+    }
 
     if (!endpoint && statusEl) {
       setStatus(

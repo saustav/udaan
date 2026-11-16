@@ -1,11 +1,11 @@
 /**
  * Site-wide configuration.
- * Replace YOUR_FORM_ID with your Formspree form ID from https://formspree.io
- * (create a form pointed at info@udaan.org.np, then paste the ID here).
+ * formEndpoint: where the contact form is sent. api/contact.php (on the
+ * cPanel host) emails each inquiry to info@udaan.org.np.
  */
 window.UDAAN_SITE_CONFIG = {
   siteUrl: "https://udaan.org.np",
-  formspreeEndpoint: "https://formspree.io/f/YOUR_FORM_ID",
+  formEndpoint: "/api/contact.php",
   social: {
     facebook:
       "https://www.facebook.com/p/UDAAN-Unmanned-Aircraft-Association-of-Nepal-61573936520305/",
