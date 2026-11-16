@@ -458,7 +458,7 @@ window.UDAAN_SITE_CONFIG = {
       '<p class="font-semibold text-sm leading-snug mb-1">Nepal Unmanned Aircraft (Drone) Association</p>' +
       '<p class="text-white/70 text-sm leading-relaxed mb-1" lang="ne">नेपाल मानव रहित विमान (ड्रोन) संघ</p>' +
       '<p class="text-white/60 text-sm leading-relaxed mb-3">Promoting safe, responsible, and sustainable unmanned aircraft operations across Nepal.</p>' +
-      '<p class="text-white/50 text-xs leading-relaxed">Reg. No. 207 · 2081/12/22<br/>Sanstha Darta Ain, 2034, Dafa 4</p>' +
+      '<p class="text-white/70 text-xs leading-relaxed">Reg. No. 207 · 2081/12/22<br/>Sanstha Darta Ain, 2034, Dafa 4</p>' +
       '<p class="text-white/60 text-xs font-semibold uppercase tracking-widest mt-6 mb-3">Follow UDAAN</p>' +
       '<div class="flex flex-wrap gap-3">' +
       social.profiles +
@@ -507,10 +507,10 @@ window.UDAAN_SITE_CONFIG = {
       "</div></div></div></div>" +
       '<div class="site-container">' +
       '<div class="py-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 w-full">' +
-      '<p class="text-white/50 text-sm text-center md:text-left">© Nepal Unmanned Aircraft (Drone) Association — UDAAN. Regulated by Civil Aviation Authority of Nepal.</p>' +
+      '<p class="text-white/70 text-sm text-center md:text-left">© Nepal Unmanned Aircraft (Drone) Association — UDAAN. Regulated by Civil Aviation Authority of Nepal.</p>' +
       '<div class="flex gap-6">' +
-      '<a class="text-white/50 text-sm hover:text-white transition-colors duration-200 cursor-pointer" href="#">Privacy Policy</a>' +
-      '<a class="text-white/50 text-sm hover:text-white transition-colors duration-200 cursor-pointer" href="#">Terms of Service</a>' +
+      '<a class="text-white/70 text-sm hover:text-white transition-colors duration-200 cursor-pointer" href="#">Privacy Policy</a>' +
+      '<a class="text-white/70 text-sm hover:text-white transition-colors duration-200 cursor-pointer" href="#">Terms of Service</a>' +
       "</div></div></div></footer>";
   }
 
