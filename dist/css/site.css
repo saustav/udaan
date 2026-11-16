@@ -821,3 +821,9 @@ footer {
 #board-grid .board-avatar > img {
   object-position: center center;
 }
+
+/* Email addresses are drawn from data attributes (not page text) to deter
+   spam harvesters; links build the mailto: address on click (js/social.js). */
+.udaan-email-text::after {
+  content: attr(data-u) "\0040" attr(data-d);
+}

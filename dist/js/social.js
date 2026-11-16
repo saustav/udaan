@@ -80,6 +80,15 @@
       .join("");
   }
 
+  // Email links: the address is assembled only on click, so it never appears
+  // as text in the page (keeps it away from spam harvesters).
+  document.addEventListener("click", function (event) {
+    var link = event.target.closest && event.target.closest("a[data-u][data-d]");
+    if (!link) return;
+    event.preventDefault();
+    window.location.href = "mailto:" + link.getAttribute("data-u") + "@" + link.getAttribute("data-d");
+  });
+
   document.addEventListener("DOMContentLoaded", function () {
     renderInlineShareLinks(
       document.getElementById("contact-share-links"),

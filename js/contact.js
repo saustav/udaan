@@ -1,4 +1,5 @@
 (function () {
+  var EMAIL = ["info", "udaan.org.np"].join("@");
   var PLACEHOLDER = "YOUR_FORM_ID";
 
   function getEndpoint(form) {
@@ -37,14 +38,14 @@
     if (statusEl && params.get("sent") === "1") {
       setStatus(statusEl, "success", "Thank you! Your inquiry has been sent. We will respond within 2–3 business days.");
     } else if (statusEl && params.get("error") === "1") {
-      setStatus(statusEl, "error", "Sorry, your message could not be sent. Please email info@udaan.org.np or call 01-4536-9808.");
+      setStatus(statusEl, "error", "Sorry, your message could not be sent. Please email " + EMAIL + " or call 01-4536-9808.");
     }
 
     if (!endpoint && statusEl) {
       setStatus(
         statusEl,
         "info",
-        "Online form delivery is not configured yet. Email us directly at info@udaan.org.np or call 01-4536-9808."
+        "Online form delivery is not configured yet. Email us directly at " + EMAIL + " or call 01-4536-9808."
       );
     }
 
@@ -55,7 +56,7 @@
           setStatus(
             statusEl,
             "error",
-            "Form not configured. Please email info@udaan.org.np with your inquiry."
+            "Form not configured. Please email " + EMAIL + " with your inquiry."
           );
         }
         return;
@@ -99,7 +100,7 @@
             setStatus(
               statusEl,
               "error",
-              error.message || "Something went wrong. Please email info@udaan.org.np instead."
+              error.message || "Something went wrong. Please email " + EMAIL + " instead."
             );
           }
         })

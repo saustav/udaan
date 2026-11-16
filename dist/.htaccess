@@ -28,6 +28,9 @@ RewriteRule \.(md|sh|py|yml|yaml|lock)$ - [R=404,L]
 # Hide build/source folders (404). mod_alias, so it also applies inside
 # folders that carry their own .htaccess (e.g. an old dist/ upload).
 <IfModule mod_alias.c>
+# Member portal shortcuts (one place to change the member URL)
+RedirectMatch 302 ^/join/?$ https://member.udaan.org.np/
+RedirectMatch 302 ^/member-login/?$ https://member.udaan.org.np/member/login.php
 RedirectMatch 404 ^/(dist|design-system|scripts|node_modules|data|\.git|\.github)(/|$)
 </IfModule>
 

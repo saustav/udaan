@@ -44,11 +44,11 @@
 
     profiles +=
       renderSocialIconLink(
-        "mailto:info@udaan.org.np",
+        getBasePath() + "contact.html",
         "Email UDAAN",
         "mail",
         iconClass
-      );
+      ).replace("<a ", '<a data-u="info" data-d="udaan.org.np" ');
 
     var share = window.UDAAN_SOCIAL.shareList()
       .map(function (item) {
@@ -83,10 +83,7 @@
       '<div class="flex flex-wrap gap-3">' +
       social.profiles +
       "</div>" +
-      '<p class="text-white/60 text-xs font-semibold uppercase tracking-widest mt-5 mb-3">Share this page</p>' +
-      '<div class="flex flex-wrap gap-2">' +
-      social.share +
-      "</div></div>" +
+      "</div>" +
       "<div>" +
       '<p class="font-semibold text-white mb-5 font-headline">Quick Links</p>' +
       '<ul class="space-y-3 text-sm">' +
@@ -108,7 +105,7 @@
       '<li><a class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer" href="' +
       base +
       'index.html#membership">Membership Tiers</a></li>' +
-      '<li><a class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer" href="https://member.udaan.org.np/" target="_blank" rel="noopener noreferrer">Become a Member</a></li>' +
+      '<li><a class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer" href="/join/">Become a Member</a></li>' +
       "</ul></div>" +
       "<div>" +
       '<p class="font-semibold text-white mb-5 font-headline">Office</p>' +
@@ -116,18 +113,15 @@
       '<li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent text-lg shrink-0">location_on</span><span>Kathmandu Metropolitan City<br/>Ward No. 29, Nepal</span></li>' +
       '<li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent text-lg shrink-0">account_balance</span><span>Registered with:<br/>District Administration Office<br/>Babarmahal, Kathmandu</span></li>' +
       '<li class="flex items-center gap-3"><span class="material-symbols-outlined text-accent text-lg shrink-0">call</span><a class="hover:text-white transition-colors duration-200 cursor-pointer" href="tel:+977145369808">01-4536-9808</a></li>' +
-      '<li class="flex items-center gap-3"><span class="material-symbols-outlined text-accent text-lg shrink-0">alternate_email</span><a class="hover:text-white transition-colors duration-200 cursor-pointer" href="mailto:info@udaan.org.np">info@udaan.org.np</a></li>' +
+      '<li class="flex items-center gap-3"><span class="material-symbols-outlined text-accent text-lg shrink-0">alternate_email</span><a class="hover:text-white transition-colors duration-200 cursor-pointer" href="' + base + 'contact.html" data-u="info" data-d="udaan.org.np" aria-label="Email UDAAN (info at udaan dot org dot np)"><span class="udaan-email-text" data-u="info" data-d="udaan.org.np" aria-hidden="true"></span></a></li>' +
       "</ul></div>" +
       "<div>" +
       '<p class="font-semibold text-white mb-5 font-headline">Stay Updated</p>' +
-      '<p class="text-white/70 text-sm leading-relaxed mb-4">Regulatory updates, events and news are posted on our social channels first.</p>' +
+      '<p class="text-white/70 text-sm leading-relaxed mb-4">Regulatory updates, events and news from UDAAN. Follow UDAAN on Facebook and LinkedIn for the latest posts.</p>' +
       '<ul class="space-y-3 text-sm">' +
-      '<li><a class="inline-flex items-center gap-2 min-h-6 text-white/70 hover:text-white transition-colors duration-200 cursor-pointer" href="' +
-      (window.UDAAN_SOCIAL ? window.UDAAN_SOCIAL.profiles().facebook : "https://www.facebook.com/") +
-      '" target="_blank" rel="noopener noreferrer">Follow on Facebook <span class="material-symbols-outlined text-base leading-none" aria-hidden="true">north_east</span></a></li>' +
-      '<li><a class="inline-flex items-center gap-2 min-h-6 text-white/70 hover:text-white transition-colors duration-200 cursor-pointer" href="' +
-      (window.UDAAN_SOCIAL ? window.UDAAN_SOCIAL.profiles().linkedin : "https://www.linkedin.com/") +
-      '" target="_blank" rel="noopener noreferrer">Follow on LinkedIn <span class="material-symbols-outlined text-base leading-none" aria-hidden="true">north_east</span></a></li>' +
+      '<li><a class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer" href="' + base + 'news/">Latest news</a></li>' +
+      '<li><a class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer" href="' + base + 'events.html">Upcoming events</a></li>' +
+      '<li><a class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer" href="' + base + 'contact.html">Contact UDAAN</a></li>' +
       "</ul>" +
       "</div></div></div></div>" +
       '<div class="site-container">' +
