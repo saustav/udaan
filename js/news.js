@@ -3,8 +3,8 @@
     items: [
       {
         id: "udaan-meets-kmc-acting-mayor",
-        date: "2026-11-05",
-        dateDisplay: "November 2026",
+        date: "2026-11-06",
+        dateDisplay: "6 November 2026",
         category: "Government Engagement",
         title: "UDAAN Meets KMC Acting Mayor Sunita Dangol",
         description:
