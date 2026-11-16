@@ -1,7 +1,7 @@
 /**
  * Site-wide configuration.
  * formEndpoint: where the contact form is sent. api/contact.php (on the
- * cPanel host) emails each inquiry to info@udaan.org.np.
+ * cPanel host) emails each inquiry to UDAAN's info address.
  */
 window.UDAAN_SITE_CONFIG = {
   siteUrl: "https://udaan.org.np",
@@ -93,6 +93,15 @@ window.UDAAN_SITE_CONFIG = {
       })
       .join("");
   }
+
+  // Email links: the address is assembled only on click, so it never appears
+  // as text in the page (keeps it away from spam harvesters).
+  document.addEventListener("click", function (event) {
+    var link = event.target.closest && event.target.closest("a[data-u][data-d]");
+    if (!link) return;
+    event.preventDefault();
+    window.location.href = "mailto:" + link.getAttribute("data-u") + "@" + link.getAttribute("data-d");
+  });
 
   document.addEventListener("DOMContentLoaded", function () {
     renderInlineShareLinks(
@@ -426,11 +435,11 @@ window.UDAAN_SITE_CONFIG = {
 
     profiles +=
       renderSocialIconLink(
-        "mailto:info@udaan.org.np",
+        getBasePath() + "contact.html",
         "Email UDAAN",
         "mail",
         iconClass
-      );
+      ).replace("<a ", '<a data-u="info" data-d="udaan.org.np" ');
 
     var share = window.UDAAN_SOCIAL.shareList()
       .map(function (item) {
@@ -498,7 +507,7 @@ window.UDAAN_SITE_CONFIG = {
       '<li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent text-lg shrink-0">location_on</span><span>Kathmandu Metropolitan City<br/>Ward No. 29, Nepal</span></li>' +
       '<li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent text-lg shrink-0">account_balance</span><span>Registered with:<br/>District Administration Office<br/>Babarmahal, Kathmandu</span></li>' +
       '<li class="flex items-center gap-3"><span class="material-symbols-outlined text-accent text-lg shrink-0">call</span><a class="hover:text-white transition-colors duration-200 cursor-pointer" href="tel:+977145369808">01-4536-9808</a></li>' +
-      '<li class="flex items-center gap-3"><span class="material-symbols-outlined text-accent text-lg shrink-0">alternate_email</span><a class="hover:text-white transition-colors duration-200 cursor-pointer" href="mailto:info@udaan.org.np">info@udaan.org.np</a></li>' +
+      '<li class="flex items-center gap-3"><span class="material-symbols-outlined text-accent text-lg shrink-0">alternate_email</span><a class="hover:text-white transition-colors duration-200 cursor-pointer" href="' + base + 'contact.html" data-u="info" data-d="udaan.org.np" aria-label="Email UDAAN (info at udaan dot org dot np)"><span class="udaan-email-text" data-u="info" data-d="udaan.org.np" aria-hidden="true"></span></a></li>' +
       "</ul></div>" +
       "<div>" +
       '<p class="font-semibold text-white mb-5 font-headline">Stay Updated</p>' +

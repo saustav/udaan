@@ -1,7 +1,7 @@
 /**
  * Site-wide configuration.
  * formEndpoint: where the contact form is sent. api/contact.php (on the
- * cPanel host) emails each inquiry to info@udaan.org.np.
+ * cPanel host) emails each inquiry to UDAAN's info address.
  */
 window.UDAAN_SITE_CONFIG = {
   siteUrl: "https://udaan.org.np",
