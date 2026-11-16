@@ -15,3 +15,37 @@ RewriteCond %{HTTPS} off
 RewriteCond %{HTTP_HOST} ^udaan\.org\.np$ [NC]
 RewriteRule ^ https://udaan.org.np%{REQUEST_URI} [R=301,L]
 </IfModule>
+
+# ---------------------------------------------------------------------------
+# Browser caching
+# CSS/JS links get ?v=<commit> added at deploy time (see deploy-cpanel.yml),
+# so they can be cached for a year and still update on every deploy.
+# Images are cached for a year too: when replacing an image, use a NEW
+# file name so visitors get the new version.
+# HTML is always revalidated so new content appears immediately.
+# ---------------------------------------------------------------------------
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresDefault "access plus 1 week"
+ExpiresByType text/html "access plus 0 seconds"
+ExpiresByType application/xml "access plus 1 hour"
+ExpiresByType text/xml "access plus 1 hour"
+ExpiresByType text/css "access plus 1 year"
+ExpiresByType application/javascript "access plus 1 year"
+ExpiresByType text/javascript "access plus 1 year"
+ExpiresByType image/webp "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/svg+xml "access plus 1 year"
+ExpiresByType image/x-icon "access plus 1 year"
+ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+<FilesMatch "\.(css|js|webp|png|jpe?g|svg|ico|woff2)$">
+Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
+<FilesMatch "\.html$">
+Header set Cache-Control "no-cache"
+</FilesMatch>
+</IfModule>
