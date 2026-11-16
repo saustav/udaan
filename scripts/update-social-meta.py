@@ -128,6 +128,7 @@ def main():
         p.relative_to(ROOT).as_posix()
         for d in ("news", "events", "programs")
         for p in (ROOT / d).glob("*.html")
+        if p.name != "index.html"
     )
     report = []
     for page in pages:

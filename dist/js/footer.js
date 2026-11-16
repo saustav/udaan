@@ -104,6 +104,9 @@
       'events.html">Events</a></li>' +
       '<li><a class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer" href="' +
       base +
+      'news/">News</a></li>' +
+      '<li><a class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer" href="' +
+      base +
       'index.html#membership">Membership Tiers</a></li>' +
       '<li><a class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer" href="https://member.udaan.org.np/" target="_blank" rel="noopener noreferrer">Become a Member</a></li>' +
       "</ul></div>" +

@@ -284,12 +284,26 @@
     return '<article class="group">' + cardInner + "</article>";
   }
 
+  var HOME_LIMIT = 6;
+
   function renderHomeNews(container, items) {
     var sorted = sortByLatest(items);
+    container.innerHTML = sorted.slice(0, HOME_LIMIT).map(renderNewsCard).join("");
+  }
+
+  function renderNewsPage(container, items) {
+    var sorted = sortByLatest(items);
+    var count = document.getElementById("news-count");
+    if (count) count.textContent = String(sorted.length);
     container.innerHTML = sorted.map(renderNewsCard).join("");
   }
 
   document.addEventListener("DOMContentLoaded", function () {
+    var pageList = document.getElementById("news-page-list");
+    if (pageList && NEWS_DATA.items && NEWS_DATA.items.length) {
+      renderNewsPage(pageList, NEWS_DATA.items);
+    }
+
     var container = document.getElementById("home-news-list");
     if (!container) return;
 

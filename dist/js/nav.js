@@ -14,6 +14,7 @@
       ],
     },
     { id: "events", label: "Events", href: "events.html" },
+    { id: "news", label: "News", href: "news/" },
   ];
 
   var MEMBER_JOIN_URL = "https://member.udaan.org.np/";
@@ -41,6 +42,7 @@
     if (file === "about.html") return "about";
     if (file === "contact.html") return "contact";
     if (file === "events.html" || path.indexOf("/events/") !== -1) return "events";
+    if (path.indexOf("/news/") !== -1) return "news";
     if (file === "programs.html" || path.indexOf("/programs/") !== -1) return "programs";
     return "home";
   }

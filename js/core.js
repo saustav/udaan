@@ -117,6 +117,7 @@ window.UDAAN_SITE_CONFIG = {
       ],
     },
     { id: "events", label: "Events", href: "events.html" },
+    { id: "news", label: "News", href: "news/" },
   ];
 
   var MEMBER_JOIN_URL = "https://member.udaan.org.np/";
@@ -144,6 +145,7 @@ window.UDAAN_SITE_CONFIG = {
     if (file === "about.html") return "about";
     if (file === "contact.html") return "contact";
     if (file === "events.html" || path.indexOf("/events/") !== -1) return "events";
+    if (path.indexOf("/news/") !== -1) return "news";
     if (file === "programs.html" || path.indexOf("/programs/") !== -1) return "programs";
     return "home";
   }
@@ -482,6 +484,9 @@ window.UDAAN_SITE_CONFIG = {
       '<li><a class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer" href="' +
       base +
       'events.html">Events</a></li>' +
+      '<li><a class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer" href="' +
+      base +
+      'news/">News</a></li>' +
       '<li><a class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer" href="' +
       base +
       'index.html#membership">Membership Tiers</a></li>' +
