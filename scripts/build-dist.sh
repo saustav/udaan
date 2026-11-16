@@ -26,7 +26,7 @@ for item in \
 done
 
 # Folders needed on the live site
-for dir in assets css js data events news programs; do
+for dir in api assets css js data events news programs; do
   if [[ -d "$ROOT/$dir" ]]; then
     rsync -a --exclude '.DS_Store' "$ROOT/$dir" "$DIST/"
   fi
