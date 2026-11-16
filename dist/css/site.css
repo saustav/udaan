@@ -827,3 +827,8 @@ footer {
 .udaan-email-text::after {
   content: attr(data-u) "\0040" attr(data-d);
 }
+
+/* Share bar: native "More…" button only where the browser supports it */
+[data-udaan-native-share][hidden] {
+  display: none !important;
+}

@@ -120,28 +120,39 @@ SHARE_START = "<!-- udaan-share:start -->"
 SHARE_END = "<!-- udaan-share:end -->"
 
 
-def share_block(url, title, label, dark=False):
-    """Static share links (visible without JavaScript, so SEO checkers see them)."""
+def share_block(url, title, label, dark=False, center=False):
+    """Static share bar (works without JavaScript, so SEO checkers see it).
+    Copy link and the native "More" sheet are enhanced by js/social.js."""
+    from html import unescape
     from urllib.parse import quote
 
+    title = unescape(title)
     u, t = quote(url, safe=""), quote(title, safe="")
     links = [
         ("Facebook", "https://www.facebook.com/sharer/sharer.php?u=" + u),
+        ("WhatsApp", "https://wa.me/?text=" + t + "%20" + u),
+        ("Viber", "viber://forward?text=" + t + "%20" + u),
         ("LinkedIn", "https://www.linkedin.com/sharing/share-offsite/?url=" + u),
         ("X", "https://twitter.com/intent/tweet?url=" + u + "&amp;text=" + t),
-        ("WhatsApp", "https://wa.me/?text=" + t + "%20" + u),
+        ("Email", "mailto:?subject=" + t + "&amp;body=" + t + "%0A" + u),
     ]
     if dark:
         wrap, lab = "flex flex-wrap items-center justify-center gap-3 mt-10", "text-white/80 text-sm font-semibold"
         btn = "inline-flex items-center min-h-6 px-4 py-2 rounded-full border border-white/30 text-white text-sm font-semibold hover:bg-white hover:text-primary transition-colors duration-200 cursor-pointer"
     else:
-        wrap, lab = "flex flex-wrap items-center gap-3 pt-8", "text-on-surface text-sm font-semibold"
+        wrap = "flex flex-wrap items-center gap-3 " + ("justify-center" if center else "pt-8")
+        lab = "text-on-surface text-sm font-semibold"
         btn = "inline-flex items-center min-h-6 px-4 py-2 rounded-full bg-surface-container border border-outline-variant text-primary text-sm font-semibold hover:bg-primary hover:text-white transition-colors duration-200 cursor-pointer"
-    items = "".join(
-        '<a class="%s" href="%s" target="_blank" rel="noopener noreferrer" aria-label="Share on %s">%s</a>' % (btn, href, name, name)
-        for name, href in links
-    )
-    return '%s\n<div class="%s"><span class="%s">%s</span>%s</div>\n%s' % (SHARE_START, wrap, lab, label, items, SHARE_END)
+    items = ""
+    for name, href in links:
+        ext = href.startswith("https://")
+        attrs = ' target="_blank" rel="nofollow noopener noreferrer"' if ext else ""
+        items += '<a class="%s" href="%s"%s aria-label="Share on %s">%s</a>' % (btn, href, attrs, name, name)
+    items += '<button type="button" class="%s" data-udaan-copy="%s" aria-label="Copy link to this page">Copy link</button>' % (btn, url)
+    items += '<button type="button" class="%s" data-udaan-native-share hidden aria-label="More sharing options">More…</button>' % btn
+    items += '<span class="sr-only" aria-live="polite" data-udaan-share-status></span>'
+    return '%s\n<div class="%s" data-udaan-share data-url="%s" data-title="%s"><span class="%s">%s</span>%s</div>\n%s' % (
+        SHARE_START, wrap, url, title.replace('"', "&quot;"), lab, label, items, SHARE_END)
 
 
 def set_share(s, block, anchor, before=True):
@@ -242,6 +253,19 @@ def main():
     s, ok = set_share(s, share_block(SITE + "/", "UDAAN — Nepal Unmanned Aircraft (Drone) Association", "Share UDAAN:", dark=True), anchor, before=False)
     home.write_text(s, encoding="utf-8")
     report.append("%-58s %s" % ("index.html", "share row" if ok else "share row anchor NOT found"))
+
+    # Other top-level pages: a share band at the end of <main>
+    for page in ["about.html", "programs.html", "events.html", "contact.html", "news/index.html", "privacy.html", "terms.html"]:
+        path = ROOT / page
+        s = path.read_text(encoding="utf-8")
+        canonical = re.search(r'<link rel="canonical" href="([^"]+)"', s).group(1)
+        title = re.search(r"<title>([^<]+)</title>", s).group(1)
+        block = share_block(canonical, title, "Share this page:", center=True)
+        band = '<section class="py-10 border-t border-outline-variant bg-surface-bright"><div class="site-container">\n' + block + '\n</div></section>'
+        s = re.sub(r'\n?<section class="py-10 border-t border-outline-variant bg-surface-bright"><div class="site-container">\n' + re.escape(SHARE_START) + r"[\s\S]*?" + re.escape(SHARE_END) + r"\n</div></section>", "", s)
+        s = s.replace("\n</main>", "\n" + band + "\n</main>", 1)
+        path.write_text(s, encoding="utf-8")
+        report.append("%-58s %s" % (page, "share band"))
 
     # Top-level pages: keep the site-wide image, but as an absolute URL
     for page in sorted(p.name for p in ROOT.glob("*.html")):

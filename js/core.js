@@ -94,6 +94,39 @@ window.UDAAN_SITE_CONFIG = {
       .join("");
   }
 
+  // Share bar: "Copy link" and the phone's native share sheet ("More…")
+  function shareStatus(el, text) {
+    var bar = el.closest("[data-udaan-share]");
+    var status = bar && bar.querySelector("[data-udaan-share-status]");
+    if (status) status.textContent = text;
+  }
+  document.addEventListener("click", function (event) {
+    var copyBtn = event.target.closest && event.target.closest("[data-udaan-copy]");
+    if (copyBtn) {
+      var url = copyBtn.getAttribute("data-udaan-copy");
+      var done = function () {
+        var old = copyBtn.textContent;
+        copyBtn.textContent = "Link copied ✓";
+        shareStatus(copyBtn, "Link copied to clipboard");
+        setTimeout(function () { copyBtn.textContent = old; }, 2000);
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(done, function () { window.prompt("Copy this link:", url); });
+      } else {
+        window.prompt("Copy this link:", url);
+      }
+      return;
+    }
+    var nativeBtn = event.target.closest && event.target.closest("[data-udaan-native-share]");
+    if (nativeBtn && navigator.share) {
+      var bar = nativeBtn.closest("[data-udaan-share]");
+      navigator.share({
+        title: bar.getAttribute("data-title") || document.title,
+        url: bar.getAttribute("data-url") || getPageUrl(),
+      }).catch(function () {});
+    }
+  });
+
   // Email links: the address is assembled only on click, so it never appears
   // as text in the page (keeps it away from spam harvesters).
   document.addEventListener("click", function (event) {
@@ -104,6 +137,7 @@ window.UDAAN_SITE_CONFIG = {
   });
 
   document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("[data-udaan-native-share]").forEach(function (b) { b.hidden = !navigator.share; });
     renderInlineShareLinks(
       document.getElementById("contact-share-links"),
       "w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-white transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
