@@ -116,19 +116,23 @@
       '<li class="flex items-center gap-3"><span class="material-symbols-outlined text-accent text-lg shrink-0">alternate_email</span><a class="hover:text-white transition-colors duration-200 cursor-pointer" href="mailto:info@udaan.org.np">info@udaan.org.np</a></li>' +
       "</ul></div>" +
       "<div>" +
-      '<p class="font-semibold text-white mb-5 font-headline">Subscribe</p>' +
-      '<p class="text-white/60 text-xs mb-4">Get regulatory updates and event announcements.</p>' +
-      '<div class="flex gap-2">' +
-      '<label class="sr-only" for="footer-email">Email address</label>' +
-      '<input class="bg-white/10 border border-white/20 text-white placeholder:text-white/40 px-4 py-3 text-sm rounded-xl focus:ring-2 focus:ring-accent focus:border-transparent outline-none w-full" id="footer-email" placeholder="Email address" type="email"/>' +
-      '<button class="bg-accent hover:bg-accent-light text-white px-4 py-3 rounded-xl font-semibold text-xs shrink-0 transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white" type="button">Join</button>' +
+      '<p class="font-semibold text-white mb-5 font-headline">Stay Updated</p>' +
+      '<p class="text-white/70 text-sm leading-relaxed mb-4">Regulatory updates, events and news are posted on our social channels first.</p>' +
+      '<ul class="space-y-3 text-sm">' +
+      '<li><a class="inline-flex items-center gap-2 min-h-6 text-white/70 hover:text-white transition-colors duration-200 cursor-pointer" href="' +
+      (window.UDAAN_SOCIAL ? window.UDAAN_SOCIAL.profiles().facebook : "https://www.facebook.com/") +
+      '" target="_blank" rel="noopener noreferrer">Follow on Facebook <span class="material-symbols-outlined text-base leading-none" aria-hidden="true">north_east</span></a></li>' +
+      '<li><a class="inline-flex items-center gap-2 min-h-6 text-white/70 hover:text-white transition-colors duration-200 cursor-pointer" href="' +
+      (window.UDAAN_SOCIAL ? window.UDAAN_SOCIAL.profiles().linkedin : "https://www.linkedin.com/") +
+      '" target="_blank" rel="noopener noreferrer">Follow on LinkedIn <span class="material-symbols-outlined text-base leading-none" aria-hidden="true">north_east</span></a></li>' +
+      "</ul>" +
       "</div></div></div></div>" +
       '<div class="site-container">' +
       '<div class="py-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 w-full">' +
       '<p class="text-white/70 text-sm text-center md:text-left">© Nepal Unmanned Aircraft (Drone) Association — UDAAN. Regulated by Civil Aviation Authority of Nepal.</p>' +
       '<div class="flex gap-6">' +
-      '<a class="text-white/70 text-sm hover:text-white transition-colors duration-200 cursor-pointer" href="#">Privacy Policy</a>' +
-      '<a class="text-white/70 text-sm hover:text-white transition-colors duration-200 cursor-pointer" href="#">Terms of Service</a>' +
+      '<a class="text-white/70 text-sm hover:text-white transition-colors duration-200 cursor-pointer" href="' + base + 'privacy.html">Privacy Policy</a>' +
+      '<a class="text-white/70 text-sm hover:text-white transition-colors duration-200 cursor-pointer" href="' + base + 'terms.html">Terms of Use</a>' +
       "</div></div></div></footer>";
   }
 
