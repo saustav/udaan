@@ -2,6 +2,30 @@
   var EVENTS_DATA = {
     events: [
       {
+        id: "kmc-acting-mayor-meeting-2026",
+        title: "Meeting with KMC Acting Mayor",
+        titleFull: "UDAAN Meeting with Kathmandu Metropolitan City Acting Mayor Sunita Dangol",
+        date: "2026-11-06",
+        dateLabel: "Friday, 6 November 2026",
+        dateShort: { day: "6", month: "Nov", year: "2026" },
+        dateGrid: "NOV 6, 2026",
+        location: "Kathmandu Metropolitan City Office",
+        description:
+          "The UDAAN team met Acting Mayor Sunita Dangol to discuss how UDAAN can support and join hands with Kathmandu Metropolitan City on unmanned aircraft technology.",
+        descriptionShort:
+          "Discussed supporting and joining hands with KMC on unmanned aircraft technology.",
+        href: "news/udaan-meets-kmc-acting-mayor.html",
+        image: "assets/news/udaan-kmc-acting-mayor-2-768.webp",
+        badge: "Government Engagement · Completed",
+        tag: "Completed",
+        tagStyle: "green",
+        status: "completed",
+        cta: "View Recap",
+        scheduleNote: "Office Meeting",
+        accent: "primary",
+        category: "advocacy",
+      },
+      {
         id: "fdb-chairman-farewell-2026",
         title: "Farewell to FDB Chairman Dinesh DC",
         titleFull: "Farewell to Film Development Board Chairman Dinesh DC",
