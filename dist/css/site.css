@@ -832,3 +832,13 @@ footer {
 [data-udaan-native-share][hidden] {
   display: none !important;
 }
+
+/* Share bar: brand-coloured icons (turn white on hover with the button) */
+.share-ic-facebook { color: #1877f2; }
+.share-ic-whatsapp { color: #25d366; }
+.share-ic-viber { color: #7360f2; }
+.share-ic-linkedin { color: #0a66c2; }
+.share-ic-x { color: #000; }
+a:hover > .share-ic-facebook, a:hover > .share-ic-whatsapp, a:hover > .share-ic-viber,
+a:hover > .share-ic-linkedin, a:hover > .share-ic-x,
+a:focus-visible > [class*="share-ic-"] { color: currentColor; }

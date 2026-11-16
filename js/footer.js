@@ -22,9 +22,10 @@
       href +
       '" rel="noopener noreferrer" target="_blank" aria-label="' +
       label +
-      '"><span class="material-symbols-outlined text-xl leading-none" aria-hidden="true">' +
-      icon +
-      "</span></a>"
+      '">' +
+      (window.UDAAN_SOCIAL && window.UDAAN_SOCIAL.icon(icon, "w-5 h-5") ||
+        '<span class="material-symbols-outlined text-xl leading-none" aria-hidden="true">' + icon + "</span>") +
+      "</a>"
     );
   }
 

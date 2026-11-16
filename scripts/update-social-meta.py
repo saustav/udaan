@@ -143,13 +143,22 @@ def share_block(url, title, label, dark=False, center=False):
         wrap = "flex flex-wrap items-center gap-3 " + ("justify-center" if center else "pt-8")
         lab = "text-on-surface text-sm font-semibold"
         btn = "inline-flex items-center min-h-6 px-4 py-2 rounded-full bg-surface-container border border-outline-variant text-primary text-sm font-semibold hover:bg-primary hover:text-white transition-colors duration-200 cursor-pointer"
+    import json as _json
+    icons = _json.loads((ROOT / "scripts" / "social-icons.json").read_text())
+
+    def ic(key, name):
+        brand = "" if dark else " share-ic-" + key
+        return '<svg class="w-4 h-4 shrink-0%s" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="%s"/></svg>' % (brand, icons[key])
+
+    btn = btn.replace("inline-flex items-center", "inline-flex items-center gap-2")
     items = ""
     for name, href in links:
         ext = href.startswith("https://")
         attrs = ' target="_blank" rel="nofollow noopener noreferrer"' if ext else ""
-        items += '<a class="%s" href="%s"%s aria-label="Share on %s">%s</a>' % (btn, href, attrs, name, name)
-    items += '<button type="button" class="%s" data-udaan-copy="%s" aria-label="Copy link to this page">Copy link</button>' % (btn, url)
-    items += '<button type="button" class="%s" data-udaan-native-share hidden aria-label="More sharing options">More…</button>' % btn
+        key = {"Email": "mail"}.get(name, name.lower())
+        items += '<a class="%s" href="%s"%s aria-label="Share on %s">%s<span>%s</span></a>' % (btn, href, attrs, name, ic(key, name), name)
+    items += '<button type="button" class="%s" data-udaan-copy="%s" aria-label="Copy link to this page">%s<span data-label>Copy link</span></button>' % (btn, url, ic("link", "Copy"))
+    items += '<button type="button" class="%s" data-udaan-native-share hidden aria-label="More sharing options">%s<span>More…</span></button>' % (btn, ic("share", "More"))
     items += '<span class="sr-only" aria-live="polite" data-udaan-share-status></span>'
     return '%s\n<div class="%s" data-udaan-share data-url="%s" data-title="%s"><span class="%s">%s</span>%s</div>\n%s' % (
         SHARE_START, wrap, url, title.replace('"', "&quot;"), lab, label, items, SHARE_END)
