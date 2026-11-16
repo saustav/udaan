@@ -61,3 +61,24 @@ Header set Cache-Control "public, max-age=31536000, immutable"
 Header set Cache-Control "no-cache"
 </FilesMatch>
 </IfModule>
+
+# ---------------------------------------------------------------------------
+# Security headers
+# - HSTS: browsers use HTTPS only for udaan.org.np for 1 year (subdomains
+#   such as member.udaan.org.np are not affected).
+# - nosniff: browsers trust the declared file type (all types are correct).
+# - SAMEORIGIN / frame-ancestors: other sites cannot embed udaan.org.np in a
+#   frame (clickjacking protection).
+# - Referrer-Policy: other sites see only "udaan.org.np", not the full page URL.
+# - Permissions-Policy: the site never uses camera, microphone, location or
+#   payment APIs, so they are switched off.
+# ---------------------------------------------------------------------------
+<IfModule mod_headers.c>
+Header always set Strict-Transport-Security "max-age=31536000" "expr=%{HTTPS} == 'on'"
+Header always set X-Content-Type-Options "nosniff"
+Header always set X-Frame-Options "SAMEORIGIN"
+Header always set Content-Security-Policy "frame-ancestors 'self'"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+Header always unset X-Powered-By
+</IfModule>
