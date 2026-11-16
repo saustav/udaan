@@ -46,6 +46,21 @@
         hashtags: "#UDAAN #FilmDevelopmentBoard #Gratitude",
       },
       {
+        id: "drone-film-festival-2026",
+        date: "2026-07-25",
+        dateDisplay: "25 July 2026",
+        category: "Partnership",
+        title: "Partner of Nepal's First Drone Film Festival 2026",
+        description:
+          "UDAAN partnered with the Drone Film Festival 2026, Nepal's first festival of drone filmmaking, held at Gokarna Forest Resort. The organisers thanked UDAAN for its support and trust.",
+        href: "news/drone-film-festival-2026.html",
+        linkLabel: "Read More",
+        image: "assets/news/drone-film-festival-2026-thanks-640.webp",
+        imageAlt: "Drone Film Festival 2026 thank-you poster featuring the UDAAN logo",
+        imagePosition: "center 55%",
+        hashtags: "#UDAAN #DroneFilmFestival #AerialCinematography #Nepal",
+      },
+      {
         id: "drone-competency-certificates-2082",
         date: "2026-04-07",
         dateDisplay: "2082 BS · Film Development Board",
