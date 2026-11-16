@@ -402,7 +402,7 @@ window.UDAAN_SITE_CONFIG = {
       href +
       '" rel="noopener noreferrer" target="_blank" aria-label="' +
       label +
-      '"><span class="material-symbols-outlined text-xl" aria-hidden="true">' +
+      '"><span class="material-symbols-outlined text-xl leading-none" aria-hidden="true">' +
       icon +
       "</span></a>"
     );
@@ -412,9 +412,9 @@ window.UDAAN_SITE_CONFIG = {
     if (!window.UDAAN_SOCIAL) return { profiles: "", share: "" };
 
     var iconClass =
-      "w-10 h-10 rounded-full bg-white text-primary hover:bg-primary-container hover:text-white transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white";
+      "inline-flex items-center justify-center shrink-0 w-10 h-10 rounded-full bg-white text-primary hover:bg-primary-container hover:text-white transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white";
     var shareIconClass =
-      "w-9 h-9 rounded-full bg-white text-primary hover:bg-primary-container hover:text-white transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white";
+      "inline-flex items-center justify-center shrink-0 w-9 h-9 rounded-full bg-white text-primary hover:bg-primary-container hover:text-white transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white";
 
     var profiles = window.UDAAN_SOCIAL.profileList()
       .map(function (item) {
