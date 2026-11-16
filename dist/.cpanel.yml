@@ -1,0 +1,9 @@
+---
+# cPanel "Git Version Control" deployment (optional; GitHub Actions normally
+# deploys on every merge to main). Copies ONLY the public website files, so
+# build files (dist/, scripts/, data/, package.json, ...) never reach the server.
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home4/udaanorg/public_html
+    - /bin/cp -R *.html robots.txt ads.txt favicon.ico sitemap.xml .htaccess $DEPLOYPATH
+    - /bin/cp -R api assets css js events news programs $DEPLOYPATH

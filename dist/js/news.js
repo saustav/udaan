@@ -71,7 +71,7 @@
         href: "news/drone-competency-certificates-2082.html",
         linkLabel: "Read More",
         image:
-          "assets/events/fdb-drone-training-2026.webp",
+          "assets/events/fdb-drone-training-2026-640.webp",
         imageAlt:
           "Drone competency certificate and scholarship distribution ceremony at Film Development Board organized by UDAAN",
         hashtags: "#UDAAN #DroneTraining #YouthEmpowerment",
@@ -87,7 +87,7 @@
         href: "events/fdb-drone-training-2026.html",
         linkLabel: "Read More",
         image:
-          "assets/events/fdb-drone-training-2026.webp",
+          "assets/events/fdb-drone-training-2026-640.webp",
         imageAlt: "FDB 10-day drone training session with instructor presenting to trainees at Film Development Board",
         hashtags: "#UDAAN #TechnicalSupervision #FilmDevelopmentBoard #DroneStandards #NepalCinema #AviationSafety",
       },

@@ -5,5 +5,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home4/udaanorg/public_html
-    - /bin/cp -R *.html robots.txt ads.txt sitemap.xml .htaccess $DEPLOYPATH
+    - /bin/cp -R *.html robots.txt ads.txt favicon.ico sitemap.xml .htaccess $DEPLOYPATH
     - /bin/cp -R api assets css js events news programs $DEPLOYPATH
