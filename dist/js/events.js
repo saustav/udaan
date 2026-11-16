@@ -2,6 +2,78 @@
   var EVENTS_DATA = {
     events: [
       {
+        id: "fdb-chairman-farewell-2026",
+        title: "Farewell to FDB Chairman Dinesh DC",
+        titleFull: "Farewell to Film Development Board Chairman Dinesh DC",
+        date: "2026-08-27",
+        dateLabel: "Thursday, 27 August 2026",
+        dateShort: { day: "27", month: "Aug", year: "2026" },
+        dateGrid: "AUG 27, 2026",
+        location: "Film Development Board, Kathmandu",
+        description:
+          "UDAAN bid farewell to outgoing Film Development Board Chairman Dinesh DC and presented a plaque of appreciation for the support that helped pave the way for UDAAN's formation.",
+        descriptionShort:
+          "Plaque of appreciation for outgoing FDB Chairman Dinesh DC (2081–2083), a founding supporter of UDAAN.",
+        href: "news/farewell-dinesh-dc-film-development-board.html",
+        image: "assets/news/dinesh-dc-farewell-udaan-640.webp",
+        badge: "Recognition · Completed",
+        tag: "Completed",
+        tagStyle: "green",
+        status: "completed",
+        cta: "View Recap",
+        scheduleNote: "Plaque Presentation",
+        accent: "secondary",
+        category: "advocacy",
+      },
+      {
+        id: "flood-response-2083",
+        title: "Flood Emergency Drone Response",
+        titleFull: "Bhotekoshi–Trishuli Flood Emergency Drone Response",
+        date: "2026-08-26",
+        dateLabel: "From Wednesday, 26 August 2026 (Bhadra 10, 2083)",
+        dateShort: { day: "26", month: "Aug", year: "2026" },
+        dateGrid: "AUG 26, 2026",
+        location: "Rasuwa, Nuwakot, Dhading, Chitwan",
+        description:
+          "UDAAN drone pilots supported the flood emergency response after NDRRMA asked helicopter and drone associations to help with search and rescue, flying only with official permission.",
+        descriptionShort:
+          "Drone pilots supported search and rescue in coordination with NDRRMA and district authorities.",
+        href: "news/flood-response-drone-pilots-2083.html",
+        image: "assets/images/disaster-response-drone.webp",
+        badge: "Disaster Response · Completed",
+        tag: "Completed",
+        tagStyle: "green",
+        status: "completed",
+        cta: "View Recap",
+        scheduleNote: "Emergency Response",
+        accent: "primary",
+        category: "response",
+      },
+      {
+        id: "drone-film-festival-2026",
+        title: "Drone Film Festival 2026",
+        titleFull: "Drone Film Festival 2026: Nepal's First Drone Film Festival",
+        date: "2026-07-25",
+        dateLabel: "Saturday, 25 July 2026",
+        dateShort: { day: "25", month: "Jul", year: "2026" },
+        dateGrid: "JUL 25, 2026",
+        location: "Gokarna Forest Resort, Kathmandu",
+        description:
+          "UDAAN was a partner of Nepal's first drone film festival, bringing aerial filmmakers and the drone community together. The organisers thanked UDAAN for its support and trust.",
+        descriptionShort:
+          "UDAAN partnered with Nepal's first festival of drone filmmaking.",
+        href: "news/drone-film-festival-2026.html",
+        image: "assets/images/drone-himalayan-peaks.webp",
+        badge: "Festival Partner · Completed",
+        tag: "Completed",
+        tagStyle: "green",
+        status: "completed",
+        cta: "View Recap",
+        scheduleNote: "Festival",
+        accent: "secondary",
+        category: "summit",
+      },
+      {
         id: "fdb-drone-training-2026",
         title: "FDB 10-Day Drone Training",
         titleFull: "FDB 10-Day Drone Training 2026",
@@ -51,7 +123,6 @@
         cta: "Event Details",
         accent: "secondary",
         category: "advocacy",
-        featured: true,
       },
       {
         id: "fpv-drone-training-2025",
@@ -122,7 +193,7 @@
         : "";
 
     var actionsHtml = "";
-    if (event.registerUrl) {
+    if (event.registerUrl && event.status !== "completed") {
       actionsHtml +=
         '<a class="inline-flex items-center gap-2 bg-primary text-on-primary px-5 py-3 rounded-full font-bold text-sm hover:bg-primary-container transition-all" href="' +
         escapeHtml(event.registerUrl) +
@@ -224,7 +295,7 @@
       escapeHtml(event.location) +
       "</p></div></div></div>" +
       '<div class="flex flex-wrap gap-4">' +
-      (event.registerUrl
+      (event.registerUrl && event.status !== "completed"
         ? '<a class="btn-primary inline-flex items-center gap-2" href="' +
           escapeHtml(event.registerUrl) +
           '" rel="noopener noreferrer" target="_blank">Register Now <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span></a>'
