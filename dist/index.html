@@ -46,18 +46,59 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": [
+    "NGO",
+    "LocalBusiness"
+  ],
+  "@id": "https://udaan.org.np/#organization",
   "name": "UDAAN – Unmanned Aircraft Association of Nepal",
-  "alternateName": "UDAAN Nepal",
+  "alternateName": [
+    "UDAAN Nepal",
+    "Nepal Unmanned Aircraft (Drone) Association",
+    "नेपाल मानव रहित विमान (ड्रोन) संघ"
+  ],
   "url": "https://udaan.org.np/",
   "logo": "https://udaan.org.np/assets/udaan-logo-512.png",
+  "image": "https://udaan.org.np/assets/udaan-logo-512.png",
   "description": "UDAAN – Unmanned Aircraft Association of Nepal, a registered association promoting safe, responsible UAV operations through advocacy, training, and industry collaboration.",
   "foundingDate": "2024",
-  "areaServed": "NP",
+  "telephone": "+977-1-45369808",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Ward No. 29, Kathmandu Metropolitan City",
+    "addressLocality": "Kathmandu",
+    "addressRegion": "Bagmati Province",
+    "addressCountry": "NP"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Nepal"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "10:00",
+      "closes": "17:00"
+    }
+  ],
   "contactPoint": {
     "@type": "ContactPoint",
     "contactType": "Membership Inquiries",
-    "url": "https://udaan.org.np/contact.html"
+    "telephone": "+977-1-45369808",
+    "url": "https://udaan.org.np/contact.html",
+    "areaServed": "NP",
+    "availableLanguage": [
+      "English",
+      "Nepali"
+    ]
   },
   "sameAs": [
     "https://www.facebook.com/p/UDAAN-Unmanned-Aircraft-Association-of-Nepal-61573936520305/",

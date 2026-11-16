@@ -110,9 +110,9 @@
       "<div>" +
       '<p class="font-semibold text-white mb-5 font-headline">Office</p>' +
       '<ul class="space-y-4 text-sm text-white/70">' +
-      '<li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent text-lg shrink-0">location_on</span><span>Kathmandu Metropolitan City<br/>Ward No. 29, Nepal</span></li>' +
+      '<li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent text-lg shrink-0" aria-hidden="true">location_on</span><address class="not-italic">Ward No. 29, Kathmandu Metropolitan City<br/>Kathmandu, Bagmati Province, Nepal</address></li>' +
       '<li class="flex items-start gap-3"><span class="material-symbols-outlined text-accent text-lg shrink-0">account_balance</span><span>Registered with:<br/>District Administration Office<br/>Babarmahal, Kathmandu</span></li>' +
-      '<li class="flex items-center gap-3"><span class="material-symbols-outlined text-accent text-lg shrink-0">call</span><a class="hover:text-white transition-colors duration-200 cursor-pointer" href="tel:+977145369808">01-4536-9808</a></li>' +
+      '<li class="flex items-center gap-3"><span class="material-symbols-outlined text-accent text-lg shrink-0">call</span><a class="hover:text-white transition-colors duration-200 cursor-pointer" href="tel:+977145369808">Phone: 01-4536-9808</a></li>' +
       '<li class="flex items-center gap-3"><span class="material-symbols-outlined text-accent text-lg shrink-0">alternate_email</span><a class="hover:text-white transition-colors duration-200 cursor-pointer" href="' + base + 'contact.html" data-u="info" data-d="udaan.org.np" aria-label="Email UDAAN (info at udaan dot org dot np)"><span class="udaan-email-text" data-u="info" data-d="udaan.org.np" aria-hidden="true"></span></a></li>' +
       "</ul></div>" +
       "<div>" +
