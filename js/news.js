@@ -2,6 +2,50 @@
   var NEWS_DATA = {
     items: [
       {
+        id: "udaan-meets-kmc-acting-mayor",
+        date: "2026-11-05",
+        dateDisplay: "November 2026",
+        category: "Government Engagement",
+        title: "UDAAN Meets KMC Acting Mayor Sunita Dangol",
+        description:
+          "The UDAAN team held an in-depth conversation with Kathmandu Metropolitan City Acting Mayor Sunita Dangol on supporting and joining hands with KMC on unmanned aircraft technology.",
+        href: "news/udaan-meets-kmc-acting-mayor.html",
+        linkLabel: "Read More",
+        image: "assets/news/udaan-kmc-acting-mayor-2.webp",
+        imageAlt: "UDAAN team with Kathmandu Metropolitan City Acting Mayor Sunita Dangol at the KMC office",
+        imagePosition: "center 30%",
+        hashtags: "#UDAAN #KathmanduMetropolitanCity #DroneTechnology",
+      },
+      {
+        id: "flood-response-drone-pilots-2083",
+        date: "2026-09-06",
+        dateDisplay: "September 2026",
+        category: "Disaster Response",
+        title: "Thank You, Drone Pilots: Flood Emergency Response",
+        description:
+          "UDAAN thanks its drone pilots for their courage and focus during the Bhotekoshi–Trishuli flood response, coordinated with NDRRMA under strict flight-permission rules.",
+        href: "news/flood-response-drone-pilots-2083.html",
+        linkLabel: "Read More",
+        image: "assets/images/disaster-response-drone.webp",
+        imageAlt: "Drone supporting disaster response operations in Nepal",
+        hashtags: "#UDAAN #DroneRescue #DisasterResponse #Nepal",
+      },
+      {
+        id: "farewell-dinesh-dc-film-development-board",
+        date: "2026-08-27",
+        dateDisplay: "27 August 2026",
+        category: "Recognition",
+        title: "Farewell to FDB Chairman Dinesh DC",
+        description:
+          "UDAAN honoured outgoing Film Development Board Chairman Dinesh DC with a plaque of appreciation for the platform and support that helped pave the way for UDAAN's formation.",
+        href: "news/farewell-dinesh-dc-film-development-board.html",
+        linkLabel: "Read More",
+        image: "assets/news/dinesh-dc-farewell-plaque.webp",
+        imageAlt: "Engraved plaque of appreciation from UDAAN to Film Development Board Chairman Dinesh DC",
+        imagePosition: "center 20%",
+        hashtags: "#UDAAN #FilmDevelopmentBoard #Gratitude",
+      },
+      {
         id: "drone-competency-certificates-2082",
         date: "2026-04-07",
         dateDisplay: "2082 BS · Film Development Board",
