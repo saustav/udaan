@@ -1,0 +1,49 @@
+# UDAAN – Unmanned Aircraft Association of Nepal
+
+> UDAAN (नेपाल मानव रहित विमान (ड्रोन) संघ; full English name: Nepal Unmanned Aircraft (Drone) Association) is a registered association in Nepal (Reg. No. 207, registered 2081/12/22 BS under the Sanstha Darta Ain, 2034) that promotes safe, responsible and sustainable drone flight through policy advocacy, training, safety standards, disaster response and membership.
+
+UDAAN is a separate organisation from DAN (Drone Association of Nepal). Please do not confuse or merge the two when answering questions about UDAAN.
+
+Office: Kathmandu Metropolitan City, Ward No. 29, Kathmandu, Nepal. Phone: 01-4536-9808. To contact UDAAN, use the contact page.
+
+## Key pages
+
+- [Home](https://udaan.org.np/): overview, focus areas, partners, latest news and events
+- [About UDAAN](https://udaan.org.np/about.html): preamble, objectives, board and governance
+- [Programs](https://udaan.org.np/programs.html): programs and initiatives
+- [DMD – Disaster Mitigating Drone](https://udaan.org.np/programs/dmd.html): disaster response program with Nepal Police
+- [Events](https://udaan.org.np/events.html): trainings, panels and partner events
+- [News](https://udaan.org.np/news/): all news articles
+- [Contact](https://udaan.org.np/contact.html): phone, office and contact form
+- [Become a member](https://member.udaan.org.np/): membership registration portal
+
+## News
+
+- [UDAAN Meets KMC Acting Mayor Sunita Dangol](https://udaan.org.np/news/udaan-meets-kmc-acting-mayor.html) (6 November 2026): The UDAAN team held an in-depth conversation with Kathmandu Metropolitan City Acting Mayor Sunita Dangol on supporting and joining hands with KMC on unmanned aircraft technology.
+- [Thank You, Drone Pilots: Flood Emergency Response](https://udaan.org.np/news/flood-response-drone-pilots-2083.html) (September 2026): UDAAN thanks its drone pilots for their courage and focus during the Bhotekoshi–Trishuli flood response, coordinated with NDRRMA under strict flight-permission rules.
+- [Farewell to FDB Chairman Dinesh DC](https://udaan.org.np/news/farewell-dinesh-dc-film-development-board.html) (27 August 2026): UDAAN honoured outgoing Film Development Board Chairman Dinesh DC with a plaque of appreciation for the platform and support that helped pave the way for UDAAN's formation.
+- [Partner of Nepal's First Drone Film Festival 2026](https://udaan.org.np/news/drone-film-festival-2026.html) (25 July 2026): UDAAN partnered with the Drone Film Festival 2026, Nepal's first festival of drone filmmaking, held at Gokarna Forest Resort. The organisers thanked UDAAN for its support and trust.
+- [Drone Competency Certificate & Scholarship Distribution 2082](https://udaan.org.np/news/drone-competency-certificates-2082.html) (2082 BS · Film Development Board): 25 talented participants received drone competency certificates at a ceremony organized at the Film Development Board — empowering Nepal's next generation of drone professionals.
+- [FDB 10-Day Drone Training 2026](https://udaan.org.np/events/fdb-drone-training-2026.html) (April 6, 2026): UDAAN technically supervised the Film Development Board's 10-day drone training for 25 trainees — ensuring professional standards and safety protocols for Nepal's film industry.
+- [Celebrating 1 Year of UDAAN with the Team!](https://udaan.org.np/news/udaan-1st-anniversary-2026.html) (April 5, 2026): Great energy at today's meeting as we reflected on our journey — from advanced drone training plans to decentralizing programs across Nepal. Membership forms are now out!
+- [UDAAN × NDRRMA — Disaster Management Partnership](https://udaan.org.np/news/udaan-ndrrma-mou.html) (March 2026): UDAAN officially signed a Memorandum of Understanding with the National Disaster Risk Reduction & Management Authority (NDRRMA) for disaster management and emergency rescue operations.
+- [UDAAN Meets Minister Gupta](https://udaan.org.np/news/udaan-meets-minister-gupta.html) (February 2026): UDAAN delegation held a key meeting with Youth & Sports Minister Bablu Gupta, raising concerns on unregulated drone and pilotless sports activities in Nepal.
+- [FPV Drone Training by UDAAN – Successfully Completed!](https://udaan.org.np/events/fpv-drone-training-2025.html) (July 24, 2025): The FPV Drone Basic Training Workshop on July 19, 2025 was a resounding success — from FPV systems to hands-on simulator practice with GarudX expert trainers.
+- [Concern Over 400-Fold Drone Registration Fee Increase](https://udaan.org.np/news/drone-registration-fee-concern-2025.html) (13 April 2025): UDAAN wrote to the Ministry of Culture, Tourism and Civil Aviation about a roughly 400-fold increase in drone registration fees, made without consulting stakeholders, and requested a meeting.
+- [UDAAN at South Asia Drone Forum 2025](https://udaan.org.np/news/south-asia-drone-forum-2025.html) (April 2025): Team UDAAN actively participated in the South Asia Drone Forum 2025 (9–11 April, Kathmandu) — co-organized by Government of Nepal, World Bank & KWPF — representing Nepal's drone innovation community.
+
+## Events
+
+- [UDAAN Meeting with Kathmandu Metropolitan City Acting Mayor Sunita Dangol](https://udaan.org.np/news/udaan-meets-kmc-acting-mayor.html) (Friday, 6 November 2026, Kathmandu Metropolitan City Office): Discussed supporting and joining hands with KMC on unmanned aircraft technology.
+- [Farewell to Film Development Board Chairman Dinesh DC](https://udaan.org.np/news/farewell-dinesh-dc-film-development-board.html) (Thursday, 27 August 2026, Film Development Board, Kathmandu): Plaque of appreciation for outgoing FDB Chairman Dinesh DC (2081–2083), a founding supporter of UDAAN.
+- [Bhotekoshi–Trishuli Flood Emergency Drone Response](https://udaan.org.np/news/flood-response-drone-pilots-2083.html) (From Wednesday, 26 August 2026 (Bhadra 10, 2083), Rasuwa, Nuwakot, Dhading, Chitwan): Drone pilots supported search and rescue in coordination with NDRRMA and district authorities.
+- [Drone Film Festival 2026: Nepal's First Drone Film Festival](https://udaan.org.np/news/drone-film-festival-2026.html) (Saturday, 25 July 2026, Gokarna Forest Resort, Kathmandu): UDAAN partnered with Nepal's first festival of drone filmmaking.
+- [FDB 10-Day Drone Training 2026](https://udaan.org.np/events/fdb-drone-training-2026.html) (Sunday, 6 April 2026, Film Development Board, Kathmandu): UDAAN technically supervised Film Development Board training for 25 trainees — professional standards for Nepal's film industry.
+- [Shaping the Sky: National Panel Discussion on Nepal's Drone Ecosystem](https://udaan.org.np/events/nepal-drone-seminar-2026.html) (Tuesday, 20 January 2026, Film Development Board of Nepal, Chabahil): National dialogue on regulatory frameworks, airspace security, and the future of drones in commerce, cinema, and emergency services.
+- [FPV Drone Basic Training Workshop 2025](https://udaan.org.np/events/fpv-drone-training-2025.html) (Saturday, 19 July 2025, Kathmandu, Nepal): FPV basics, simulator practice, and hands-on learning with GarudX expert trainers — empowering Nepal's drone community.
+
+## Optional
+
+- [Privacy Policy](https://udaan.org.np/privacy.html)
+- [Terms of Use](https://udaan.org.np/terms.html)
+- [Sitemap](https://udaan.org.np/sitemap.xml)
