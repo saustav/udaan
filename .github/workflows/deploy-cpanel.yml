@@ -12,6 +12,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Subset icon font to the icons the site uses
+        run: python3 scripts/update-icon-font.py
+
       - name: Add cache-busting version to CSS/JS links
         run: |
           V="${GITHUB_SHA::8}"
