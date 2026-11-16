@@ -18,7 +18,7 @@ copy_item() {
 
 # Root pages and site metadata
 for item in \
-  index.html about.html contact.html events.html programs.html \
+  index.html about.html contact.html events.html programs.html privacy.html terms.html \
   robots.txt sitemap.xml .htaccess; do
   if [[ -e "$ROOT/$item" ]]; then
     cp "$ROOT/$item" "$DIST/"
