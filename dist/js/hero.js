@@ -110,7 +110,17 @@
       if (basePath && src.indexOf("http") !== 0 && src.indexOf("//") !== 0 && src.charAt(0) !== "/") {
         src = basePath + src;
       }
-      return { src: src, alt: slide.alt };
+      var srcset = slide.srcset;
+      if (srcset && basePath) {
+        srcset = srcset
+          .split(",")
+          .map(function (candidate) {
+            var c = candidate.trim();
+            return c.indexOf("http") === 0 || c.charAt(0) === "/" ? c : basePath + c;
+          })
+          .join(", ");
+      }
+      return { src: src, alt: slide.alt, srcset: srcset };
     });
   }
 
@@ -142,6 +152,10 @@
       item.setAttribute("data-slide-index", String(index));
 
       var img = document.createElement("img");
+      if (slide.srcset) {
+        img.srcset = slide.srcset;
+        img.sizes = "100vw";
+      }
       img.src = slide.src;
       img.alt = slide.alt;
       img.loading = index === 0 ? "eager" : "lazy";
