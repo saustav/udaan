@@ -33,9 +33,19 @@ jobs:
           local-dir: ./
           server-dir: ./
           exclude: |
+            **/.git/**
             **/.git*
             **/.github/**
             **/node_modules/**
             **/.cursor/**
             **/scripts/**
             **/.DS_Store
+            dist/**
+            design-system/**
+            data/**
+            package.json
+            package-lock.json
+            tailwind.config.js
+            css/tailwind-src.css
+            .cpanel.yml
+            **/*.md

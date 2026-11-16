@@ -14,6 +14,18 @@ RewriteRule ^ https://udaan.org.np%{REQUEST_URI} [R=301,L]
 RewriteCond %{HTTPS} off
 RewriteCond %{HTTP_HOST} ^udaan\.org\.np$ [NC]
 RewriteRule ^ https://udaan.org.np%{REQUEST_URI} [R=301,L]
+
+# 3) Hide build/source files that are not part of the website (404)
+#    .well-known stays reachable for SSL certificate checks.
+RewriteRule (^|/)\.(?!well-known(/|$)) - [R=404,L]
+RewriteRule ^(package(-lock)?\.json|tailwind\.config\.js|css/tailwind-src\.css)$ - [R=404,L]
+RewriteRule \.(md|sh|py|yml|yaml|lock)$ - [R=404,L]
+</IfModule>
+
+# Hide build/source folders (404). mod_alias, so it also applies inside
+# folders that carry their own .htaccess (e.g. an old dist/ upload).
+<IfModule mod_alias.c>
+RedirectMatch 404 ^/(dist|design-system|scripts|node_modules|data|\.git|\.github)(/|$)
 </IfModule>
 
 # ---------------------------------------------------------------------------
