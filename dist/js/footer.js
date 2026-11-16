@@ -105,9 +105,7 @@
       '<li><a class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer" href="' +
       base +
       'index.html#membership">Membership Tiers</a></li>' +
-      '<li><a class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer" href="' +
-      base +
-      'contact.html#contact-form">Membership Inquiries</a></li>' +
+      '<li><a class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer" href="https://member.udaan.org.np/" target="_blank" rel="noopener noreferrer">Become a Member</a></li>' +
       "</ul></div>" +
       "<div>" +
       '<p class="font-semibold text-white mb-5 font-headline">Office</p>' +

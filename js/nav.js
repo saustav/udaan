@@ -16,8 +16,8 @@
     { id: "events", label: "Events", href: "events.html" },
   ];
 
-  var MEMBER_JOIN_URL = "http://member.udaan.org.np/";
-  var MEMBER_LOGIN_URL = "http://member.udaan.org.np/member/login.php";
+  var MEMBER_JOIN_URL = "https://member.udaan.org.np/";
+  var MEMBER_LOGIN_URL = "https://member.udaan.org.np/member/login.php";
 
   function getBasePath() {
     if (document.querySelector("base[href]")) {

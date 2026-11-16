@@ -119,8 +119,8 @@ window.UDAAN_SITE_CONFIG = {
     { id: "events", label: "Events", href: "events.html" },
   ];
 
-  var MEMBER_JOIN_URL = "http://member.udaan.org.np/";
-  var MEMBER_LOGIN_URL = "http://member.udaan.org.np/member/login.php";
+  var MEMBER_JOIN_URL = "https://member.udaan.org.np/";
+  var MEMBER_LOGIN_URL = "https://member.udaan.org.np/member/login.php";
 
   function getBasePath() {
     if (document.querySelector("base[href]")) {
@@ -485,9 +485,7 @@ window.UDAAN_SITE_CONFIG = {
       '<li><a class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer" href="' +
       base +
       'index.html#membership">Membership Tiers</a></li>' +
-      '<li><a class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer" href="' +
-      base +
-      'contact.html#contact-form">Membership Inquiries</a></li>' +
+      '<li><a class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer" href="https://member.udaan.org.np/" target="_blank" rel="noopener noreferrer">Become a Member</a></li>' +
       "</ul></div>" +
       "<div>" +
       '<p class="font-semibold text-white mb-5 font-headline">Office</p>' +
