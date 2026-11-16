@@ -142,7 +142,16 @@
     return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   }
 
-  function buildMedia(slides) {
+  function sameImage(img, src) {
+    if (!img || !src) return false;
+    try {
+      return new URL(img.getAttribute("src"), document.baseURI).href === new URL(src, document.baseURI).href;
+    } catch (error) {
+      return false;
+    }
+  }
+
+  function buildMedia(slides, existingImg) {
     var media = document.createElement("div");
     media.className = "udaan-hero__media";
 
@@ -150,6 +159,15 @@
       var item = document.createElement("div");
       item.className = "udaan-hero__slide" + (index === 0 ? " is-active" : "");
       item.setAttribute("data-slide-index", String(index));
+
+      // Reuse the hero <img> already in the HTML for the first slide, so the
+      // browser keeps the image it has already painted (faster LCP).
+      if (index === 0 && sameImage(existingImg, slide.src)) {
+        existingImg.removeAttribute("class");
+        item.appendChild(existingImg);
+        media.appendChild(item);
+        return;
+      }
 
       var img = document.createElement("img");
       if (slide.srcset) {
@@ -325,7 +343,9 @@
 
     var bg = section.querySelector(":scope > .absolute.inset-0.z-0");
     if (bg) {
-      bg.replaceWith(buildMedia(slides));
+      var existingImg = bg.querySelector("img");
+      if (existingImg) existingImg.remove();
+      bg.replaceWith(buildMedia(slides, existingImg));
     } else if (!section.querySelector(".udaan-hero__media")) {
       section.insertBefore(buildMedia(slides), section.firstChild);
     }

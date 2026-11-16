@@ -30,7 +30,7 @@ ORG = {
     "name": ORG_NAME,
     "alternateName": "UDAAN",
     "url": SITE + "/",
-    "logo": {"@type": "ImageObject", "url": SITE + "/assets/apple-touch-icon.png", "width": 180, "height": 180},
+    "logo": {"@type": "ImageObject", "url": SITE + "/assets/udaan-logo-512.png", "width": 512, "height": 512},
 }
 
 # Pages whose hero is a stock photo or a slideshow: use a more representative
