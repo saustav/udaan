@@ -1,0 +1,5 @@
+# ads.txt for udaan.org.np
+# UDAAN does not sell advertising on this website, so no sellers are authorized.
+# Placeholder record per the IAB Tech Lab ads.txt specification
+# (section 3.2.1, files without authorized advertising system records).
+placeholder.example.com, placeholder, DIRECT, placeholder
