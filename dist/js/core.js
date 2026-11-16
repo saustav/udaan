@@ -129,8 +129,8 @@ window.UDAAN_SITE_CONFIG = {
     { id: "news", label: "News", href: "news/" },
   ];
 
-  var MEMBER_JOIN_URL = "https://member.udaan.org.np/";
-  var MEMBER_LOGIN_URL = "https://member.udaan.org.np/member/login.php";
+  var MEMBER_JOIN_URL = "/join/";
+  var MEMBER_LOGIN_URL = "/member-login/";
 
   function getBasePath() {
     if (document.querySelector("base[href]")) {
@@ -258,12 +258,12 @@ window.UDAAN_SITE_CONFIG = {
       loginClass +
       '" href="' +
       MEMBER_LOGIN_URL +
-      '" target="_blank" rel="noopener noreferrer">Member Login</a>' +
+      '">Member Login</a>' +
       '<a class="' +
       joinClass +
       '" href="' +
       MEMBER_JOIN_URL +
-      '" target="_blank" rel="noopener noreferrer">Become a Member</a>'
+      '">Become a Member</a>'
     );
   }
 
@@ -331,7 +331,7 @@ window.UDAAN_SITE_CONFIG = {
     bar.innerHTML =
       '<a class="mobile-member-bar__link" href="' +
       MEMBER_JOIN_URL +
-      '" target="_blank" rel="noopener noreferrer">' +
+      '">' +
       '<span class="mobile-member-bar__label">Become a Member</span>' +
       '<span class="material-symbols-outlined mobile-member-bar__icon" aria-hidden="true">arrow_forward</span>' +
       "</a>";
@@ -474,10 +474,7 @@ window.UDAAN_SITE_CONFIG = {
       '<div class="flex flex-wrap gap-3">' +
       social.profiles +
       "</div>" +
-      '<p class="text-white/60 text-xs font-semibold uppercase tracking-widest mt-5 mb-3">Share this page</p>' +
-      '<div class="flex flex-wrap gap-2">' +
-      social.share +
-      "</div></div>" +
+      "</div>" +
       "<div>" +
       '<p class="font-semibold text-white mb-5 font-headline">Quick Links</p>' +
       '<ul class="space-y-3 text-sm">' +
@@ -499,7 +496,7 @@ window.UDAAN_SITE_CONFIG = {
       '<li><a class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer" href="' +
       base +
       'index.html#membership">Membership Tiers</a></li>' +
-      '<li><a class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer" href="https://member.udaan.org.np/" target="_blank" rel="noopener noreferrer">Become a Member</a></li>' +
+      '<li><a class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer" href="/join/">Become a Member</a></li>' +
       "</ul></div>" +
       "<div>" +
       '<p class="font-semibold text-white mb-5 font-headline">Office</p>' +
@@ -511,14 +508,11 @@ window.UDAAN_SITE_CONFIG = {
       "</ul></div>" +
       "<div>" +
       '<p class="font-semibold text-white mb-5 font-headline">Stay Updated</p>' +
-      '<p class="text-white/70 text-sm leading-relaxed mb-4">Regulatory updates, events and news are posted on our social channels first.</p>' +
+      '<p class="text-white/70 text-sm leading-relaxed mb-4">Regulatory updates, events and news from UDAAN. Follow UDAAN on Facebook and LinkedIn for the latest posts.</p>' +
       '<ul class="space-y-3 text-sm">' +
-      '<li><a class="inline-flex items-center gap-2 min-h-6 text-white/70 hover:text-white transition-colors duration-200 cursor-pointer" href="' +
-      (window.UDAAN_SOCIAL ? window.UDAAN_SOCIAL.profiles().facebook : "https://www.facebook.com/") +
-      '" target="_blank" rel="noopener noreferrer">Follow on Facebook <span class="material-symbols-outlined text-base leading-none" aria-hidden="true">north_east</span></a></li>' +
-      '<li><a class="inline-flex items-center gap-2 min-h-6 text-white/70 hover:text-white transition-colors duration-200 cursor-pointer" href="' +
-      (window.UDAAN_SOCIAL ? window.UDAAN_SOCIAL.profiles().linkedin : "https://www.linkedin.com/") +
-      '" target="_blank" rel="noopener noreferrer">Follow on LinkedIn <span class="material-symbols-outlined text-base leading-none" aria-hidden="true">north_east</span></a></li>' +
+      '<li><a class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer" href="' + base + 'news/">Latest news</a></li>' +
+      '<li><a class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer" href="' + base + 'events.html">Upcoming events</a></li>' +
+      '<li><a class="text-white/70 hover:text-white transition-colors duration-200 cursor-pointer" href="' + base + 'contact.html">Contact UDAAN</a></li>' +
       "</ul>" +
       "</div></div></div></div>" +
       '<div class="site-container">' +

@@ -17,8 +17,8 @@
     { id: "news", label: "News", href: "news/" },
   ];
 
-  var MEMBER_JOIN_URL = "https://member.udaan.org.np/";
-  var MEMBER_LOGIN_URL = "https://member.udaan.org.np/member/login.php";
+  var MEMBER_JOIN_URL = "/join/";
+  var MEMBER_LOGIN_URL = "/member-login/";
 
   function getBasePath() {
     if (document.querySelector("base[href]")) {
@@ -146,12 +146,12 @@
       loginClass +
       '" href="' +
       MEMBER_LOGIN_URL +
-      '" target="_blank" rel="noopener noreferrer">Member Login</a>' +
+      '">Member Login</a>' +
       '<a class="' +
       joinClass +
       '" href="' +
       MEMBER_JOIN_URL +
-      '" target="_blank" rel="noopener noreferrer">Become a Member</a>'
+      '">Become a Member</a>'
     );
   }
 
@@ -219,7 +219,7 @@
     bar.innerHTML =
       '<a class="mobile-member-bar__link" href="' +
       MEMBER_JOIN_URL +
-      '" target="_blank" rel="noopener noreferrer">' +
+      '">' +
       '<span class="mobile-member-bar__label">Become a Member</span>' +
       '<span class="material-symbols-outlined mobile-member-bar__icon" aria-hidden="true">arrow_forward</span>' +
       "</a>";

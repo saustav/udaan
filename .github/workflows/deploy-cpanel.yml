@@ -12,8 +12,22 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
       - name: Subset icon font to the icons the site uses
         run: python3 scripts/update-icon-font.py
+
+      - name: Generate llms.txt from news and events
+        run: python3 scripts/update-llms-txt.py
+
+      - name: Pre-render JavaScript content into the HTML (for crawlers and AI)
+        run: |
+          pip install --quiet playwright
+          python -m playwright install --with-deps chromium
+          python3 scripts/prerender.py
 
       - name: Add cache-busting version to CSS/JS links
         run: |
