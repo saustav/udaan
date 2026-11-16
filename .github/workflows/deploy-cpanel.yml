@@ -12,6 +12,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Add cache-busting version to CSS/JS links
+        run: |
+          V="${GITHUB_SHA::8}"
+          find . -name '*.html' -not -path './node_modules/*' -not -path './.git/*' -print0 \
+            | xargs -0 sed -i -E "s#((href|src)=\"[^\"?]*(css|js)/[^\"?]+\.(css|js))\"#\1?v=${V}\"#g"
+          grep -c "app.css?v=${V}" index.html
+
       - name: Deploy site files to cPanel
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
