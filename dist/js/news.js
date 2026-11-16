@@ -124,8 +124,8 @@
       },
       {
         id: "udaan-meets-minister-gupta",
-        date: "2026-02-10",
-        dateDisplay: "February 2026",
+        date: "2025-12-01",
+        dateDisplay: "Late 2025",
         category: "Government Engagement",
         title: "UDAAN Meets Minister Gupta",
         description:
