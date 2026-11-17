@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # full history, for each page's last-modified date
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -22,6 +24,9 @@ jobs:
 
       - name: Generate llms.txt from news and events
         run: python3 scripts/update-llms-txt.py
+
+      - name: Write each page's last-modified date (from git history)
+        run: python3 scripts/update-modified-dates.py
 
       - name: Pre-render JavaScript content into the HTML (for crawlers and AI)
         run: |

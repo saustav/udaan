@@ -63,7 +63,7 @@
       {
         id: "drone-competency-certificates-2082",
         date: "2026-04-07",
-        dateDisplay: "2082 BS · Film Development Board",
+        dateDisplay: "April 2026 (2082 BS) · Film Development Board",
         category: "Training & Education",
         title: "Drone Competency Certificate & Scholarship Distribution 2082",
         description:

@@ -449,6 +449,18 @@ window.UDAAN_SITE_CONFIG = {
     return "";
   }
 
+  // "Page last updated" from <meta property="og:updated_time"> (set at deploy
+  // from git history by scripts/update-modified-dates.py)
+  function lastUpdatedLine() {
+    var meta = document.querySelector('meta[property="og:updated_time"]');
+    var iso = meta && meta.getAttribute("content");
+    if (!iso || !/^\d{4}-\d{2}-\d{2}/.test(iso)) return "";
+    var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var p = iso.slice(0, 10).split("-");
+    var label = parseInt(p[2], 10) + " " + months[parseInt(p[1], 10) - 1] + " " + p[0];
+    return '<p class="text-white/60 text-xs mt-1">Page last updated: <time datetime="' + iso.slice(0, 10) + '">' + label + "</time></p>";
+  }
+
   function renderSocialIconLink(href, label, icon, className) {
     return (
       '<a class="' +
@@ -514,7 +526,7 @@ window.UDAAN_SITE_CONFIG = {
       '<p class="font-semibold text-sm leading-snug mb-1">Nepal Unmanned Aircraft (Drone) Association</p>' +
       '<p class="text-white/70 text-sm leading-relaxed mb-1" lang="ne">नेपाल मानव रहित विमान (ड्रोन) संघ</p>' +
       '<p class="text-white/60 text-sm leading-relaxed mb-3">Promoting safe, responsible, and sustainable unmanned aircraft operations across Nepal.</p>' +
-      '<p class="text-white/70 text-xs leading-relaxed">Reg. No. 207 · 2081/12/22<br/>Sanstha Darta Ain, 2034, Dafa 4</p>' +
+      '<p class="text-white/70 text-xs leading-relaxed">Reg. No. 207 · 2081/12/22 BS (4 April 2025)<br/>Sanstha Darta Ain, 2034, Dafa 4</p>' +
       '<p class="text-white/60 text-xs font-semibold uppercase tracking-widest mt-6 mb-3">Follow UDAAN</p>' +
       '<div class="flex flex-wrap gap-3">' +
       social.profiles +
@@ -562,7 +574,10 @@ window.UDAAN_SITE_CONFIG = {
       "</div></div></div></div>" +
       '<div class="site-container">' +
       '<div class="py-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 w-full">' +
-      '<p class="text-white/70 text-sm text-center md:text-left">© Nepal Unmanned Aircraft (Drone) Association — UDAAN. Regulated by Civil Aviation Authority of Nepal.</p>' +
+      '<div class="text-center md:text-left">' +
+      '<p class="text-white/70 text-sm">© 2025–' + new Date().getFullYear() + ' Nepal Unmanned Aircraft (Drone) Association — UDAAN. Regulated by Civil Aviation Authority of Nepal.</p>' +
+      lastUpdatedLine() +
+      "</div>" +
       '<div class="flex gap-6">' +
       '<a class="text-white/70 text-sm hover:text-white transition-colors duration-200 cursor-pointer" href="' + base + 'privacy.html">Privacy Policy</a>' +
       '<a class="text-white/70 text-sm hover:text-white transition-colors duration-200 cursor-pointer" href="' + base + 'terms.html">Terms of Use</a>' +
