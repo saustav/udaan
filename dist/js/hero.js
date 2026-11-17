@@ -179,6 +179,9 @@
       img.loading = index === 0 ? "eager" : "lazy";
       if (index === 0) img.fetchPriority = "high";
       img.decoding = "async";
+      // Same intrinsic size as the first hero image (all slides fill the same box)
+      img.width = (existingImg && existingImg.getAttribute("width")) || 1280;
+      img.height = (existingImg && existingImg.getAttribute("height")) || 720;
 
       item.appendChild(img);
       media.appendChild(item);

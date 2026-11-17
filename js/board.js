@@ -41,7 +41,7 @@
     if (director.photo) {
       var alt = escapeHtml(director.name + ", " + director.role);
       return (
-        '<img class="w-full h-full object-cover object-center" src="' +
+        '<img width="400" height="400" class="w-full h-full object-cover object-center" src="' +
         escapeHtml(director.photo) +
         '" alt="' +
         alt +
