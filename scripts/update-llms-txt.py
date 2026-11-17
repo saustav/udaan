@@ -31,7 +31,7 @@ def main():
         "# UDAAN – Unmanned Aircraft Association of Nepal",
         "",
         "> UDAAN (नेपाल मानव रहित विमान (ड्रोन) संघ; full English name: Nepal Unmanned Aircraft (Drone) "
-        "Association) is a registered association in Nepal (Reg. No. 207, registered 2081/12/22 BS under the "
+        "Association) is a registered association in Nepal (Reg. No. 207, registered 2081/12/22 BS (4 April 2025) under the "
         "Sanstha Darta Ain, 2034) that promotes safe, responsible and sustainable drone flight through policy "
         "advocacy, training, safety standards, disaster response and membership.",
         "",

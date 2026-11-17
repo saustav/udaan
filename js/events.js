@@ -37,7 +37,7 @@
         description:
           "UDAAN bid farewell to outgoing Film Development Board Chairman Dinesh DC and presented a plaque of appreciation for the support that helped pave the way for UDAAN's formation.",
         descriptionShort:
-          "Plaque of appreciation for outgoing FDB Chairman Dinesh DC (2081–2083), a founding supporter of UDAAN.",
+          "Plaque of appreciation for outgoing FDB Chairman Dinesh DC (2081–2083 BS / 2024–2026), a founding supporter of UDAAN.",
         href: "news/farewell-dinesh-dc-film-development-board.html",
         image: "assets/news/dinesh-dc-farewell-udaan-640.webp",
         badge: "Recognition · Completed",
