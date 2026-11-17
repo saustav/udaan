@@ -100,9 +100,9 @@
       ' bg-surface-container flex items-center justify-center transition-colors duration-200">' +
       renderPhoto(director) +
       "</div>" +
-      '<h5 class="text-lg font-headline font-semibold text-on-surface">' +
+      '<h3 class="text-lg font-headline font-semibold text-on-surface">' +
       escapeHtml(director.name) +
-      "</h5>" +
+      "</h3>" +
       '<p class="' +
       textClass +
       ' text-sm font-semibold mt-1">' +
