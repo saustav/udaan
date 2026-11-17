@@ -339,7 +339,7 @@
       '<a class="group bg-surface-bright rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover transition-shadow duration-200 border border-outline-variant flex flex-col card-interactive" href="' +
       escapeHtml(event.href) +
       '"><div class="h-48 overflow-hidden relative">' +
-      '<img class="w-full h-full object-cover group-hover:opacity-95 transition-opacity duration-300 motion-reduce:transition-none" alt="' +
+      '<img width="640" height="384" class="w-full h-full object-cover group-hover:opacity-95 transition-opacity duration-300 motion-reduce:transition-none" alt="' +
       escapeHtml(event.title) +
       '" src="' +
       escapeHtml(event.image) +

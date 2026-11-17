@@ -246,7 +246,7 @@
 
     var cardInner =
       '<div class="h-48 rounded-t-2xl overflow-hidden border-b border-outline-variant">' +
-      '<img class="w-full h-full object-cover group-hover:opacity-95 transition-opacity duration-300 motion-reduce:transition-none" alt="' +
+      '<img width="640" height="384" class="w-full h-full object-cover group-hover:opacity-95 transition-opacity duration-300 motion-reduce:transition-none" alt="' +
       escapeHtml(item.imageAlt) +
       '" src="' +
       escapeHtml(item.image) +
